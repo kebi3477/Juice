@@ -1,4 +1,4 @@
-<h3 align='center'>👾 Mad Movie 👾</h3>
+<h3 align='center'>🧃 Juice 🧃</h3>
 <br>
 <p align='center'>
   <a href="https://github.com/anuraghazra/github-readme-stats">
