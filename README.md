@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+<h3 align='center'>🧃 Juice 🧃</h3>
+<br>
+<p align='center'>
+  <a href="https://github.com/anuraghazra/github-readme-stats">
+    
+  </a>
+</p>
+<br>
+<h3 align='center'>🔨 Developer Stack</h3>
+<p align='center'>
+  <img src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=HTML5&logoColor=white"/>
+  <img src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=CSS3&logoColor=white"/>
+  <img src="https://img.shields.io/badge/JavaScript-e9d24e?style=flat-square&logo=JavaScript&logoColor=white"/>
+  <img src="https://img.shields.io/badge/React-61DAFB?style=flat-square&logo=React&logoColor=white"/>
+  <br>
+  <img src="https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=Node.js&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Express-3766AB?style=flat-square&logo=Express&logoColor=white"/>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=flat-square&logo=MySQL&logoColor=white"/>
+</p>
+<br>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 소개
 
-## Available Scripts
+### 🔎 무슨 앱인가?
 
-In the project directory, you can run:
+ 이러이러한 앱 어플리케이션 입니다.
 
-### `npm start`
+## 🎈 기대효과
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+ 이러이러한 점들이 기대될 것 같습니다.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 후기
 
-### `npm test`
+### 🐵 좋았던 점
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+이러이러한 점들이 좋았습니다.
 
-### `npm run build`
+```
+예시
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 🙊 아쉬운 점
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+이러이러한 점들이 아쉬웠습니다.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+예시
+```
 
-### `npm run eject`
+## 구성원
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* 😎 김재연 [개발자] - 개발
+* 😎 고동민 [개발자] - 개발
+* 😎 조용훈 [개발자] - 개발
+* 😩 고혜경 [디자이너] - 디자인
+* 😩 김남훈 [디자이너] - 디자인
+* 😩 이학형 [디자이너] - 디자인
+* 😩 홍원우 [디자이너] - 디자인
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 감사의 말
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+* 열심히 고생해준 친구들한테 감사를 표합니다.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# 2021 Jeju Polytech Project Digital Content Design
