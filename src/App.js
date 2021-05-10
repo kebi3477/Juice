@@ -1,25 +1,22 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './App.css';
+import Login from './js/Login';
+import Join from './js/Join';
+import FindID from './js/FindID';
+import FindPW from './js/FindPW';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<Router>
+				<Route exact path="/login" component={Login} />
+				<Route exact path="/join" component={Join} />
+				<Route exact path="/findid" component={FindID} />
+				<Route exact path="/findpw" component={FindPW} />
+			</Router>
+		</div>
+	);
 }
 
 export default App;
