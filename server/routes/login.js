@@ -6,26 +6,27 @@ const status = {};
 
 db.connect(conn);
 
-router.get('/login', function(req, res) {
+router.post('/login', function(req, res) {
     const user = req.body;
-    if(!user.id || !user.password) {
+    if(!user.id || !user.pw) {
         status.result = 'null';
+        res.json(status);
     } else {
-        const sql = `SELECT * FROM user WHERE user_id = '${user.id}' and user_password = '${user.password}'`;
-        conn.query(sql, function(err, rows) {   
+        const sql = `SELECT * FROM user WHERE user_id = '${user.id}' and user_password = '${user.pw}'`;
+        conn.query(sql, function(err, rows) {
             if(err || !rows.length) {
                 status.result = 'fail';
             } else {
                 status.result = 'success';
             }
+            res.json(status);
         })
     }
-    res.json(status);
 })
 
-router.get('/signUp', function(req, res) {
+router.post('/signUp', function(req, res) {
     const user = req.body;
-    if(!user.id || !user.password || !user.email || !user.name ) {
+    if(!user.id || !user.pw || !user.email || !user.name ) {
         status.result = 'null';
     } else if(!/^[A-Za-z0-9]{6,12}$/.test(user.id)) {
         status.result = 'fail';

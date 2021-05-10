@@ -1,8 +1,21 @@
 import React from 'react';
 import './Login.css';
 
+let state = {};
+
 const loging = () => {
-    console.log('loging click');
+    fetch('/user/login', {
+        method: 'POST',
+        dataType: "JSON",
+        headers: {
+            "Content-Type": "application/json; charset=utf-8"
+        },
+        body: JSON.stringify(state)
+    })
+    .then(res => res.json())
+    .then(res => {
+        console.log(res);
+    })
 }
 
 const join = () => {
@@ -17,6 +30,10 @@ const findPW = () => {
     console.log('findPW click');
 }
 
+const setState = e => {
+    state[e.target.name] = e.target.value
+}
+
 function Login(){
     return(
         <div className="login">
@@ -27,14 +44,14 @@ function Login(){
 
             {/* // 로그인 폼 */}
             <form className="login__form" method="POST">
-                <input className="login__form--input login__form--input-id" type="text" placeholder="아이디" />
-                <input className="login__form--input login__form--input-pw" type="password" placeholder="비밀번호" />
+                <input className="login__form--input login__form--input-id" type="text" placeholder="아이디" onChange={setState} name="id"/>
+                <input className="login__form--input login__form--input-pw" type="password" placeholder="비밀번호"  onChange={setState} name="pw"/>
                 <button className="login__form--input login__form--input-login" type="button" onClick={loging}>로그인</button>
             </form>
 
             {/* // 로그인 메뉴 */}
             <div className="login__navi">
-                <button className="login__navi--join" type="button" onClick={join}>회원가입</button>
+                <button className="login__navi--join" type="button">회원가입</button>
                 <div className="login__navi--find">
                     <button className="login__navi--find-id" type="button" onClick={findID}>아이디</button>
                     /
