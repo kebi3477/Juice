@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const api = require('./routes/index');
+const index = require('./routes/index.js');
 const port = 3002;
 
-app.use('/api', api);
+app.use('/', index);
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
