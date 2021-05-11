@@ -11,7 +11,7 @@ function App() {
 		<div className="App">
 			<Router>
 				<Route exact path="/login" component={Login} />
-				<Route exact path="/join" component={Join} />
+				<Route exact path="/join" component={Join} />	
 				<Route exact path="/findid" component={FindID} />
 				<Route exact path="/findpw" component={FindPW} />
 			</Router>

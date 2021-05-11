@@ -1,8 +1,27 @@
 import React from 'react';
+import {setState, state} from './formModule';
 import './FindID.css';
 
 const findID = () => {
-    console.log('findID click');
+    fetch('/user/findId', {
+        method: 'POST',
+        dataType: "JSON",
+        headers: {
+            "Content-Type": "application/json; charset=utf-8"
+        },
+        body: JSON.stringify(state)
+    })
+    .then(res => res.json())
+    .then(res => {
+        if(res.result === 'success') {
+            console.log(res.user_id);
+            //아이디 찾기 성공
+        } else if(res.result === 'null') {
+            //값이 비었음
+        } else {
+            //아이디 찾기 실패
+        }
+    })
 }
 
 const findPW = () => {
@@ -19,14 +38,14 @@ function FindID(){
 
             {/* // 아이디찾기 폼 */}
             <form className="findID__form" method="POST">
-                <input className="findID__form--input findID__form--input-name" type="text" placeholder="이름" />
-                <input className="findID__form--input findID__form--input-email" type="text" placeholder="이메일" />
-                <button className="findID__form--input findID__form--input-findID" type="button" onClick={findPW}>아이디 찾기</button>
+                <input className="findID__form--input findID__form--input-name" type="text" placeholder="이름" onChange={setState} name="name"/>
+                <input className="findID__form--input findID__form--input-email" type="text" placeholder="이메일" onChange={setState} name="email"/>
+                <button className="findID__form--input findID__form--input-findID" type="button" onClick={findID}>아이디 찾기</button>
             </form>
             
             {/* // 아이디찾기 메뉴 */}
             <div className="findID__navi">
-                <button className="findID__navi--find" type="button" onClick={findID}>비밀번호 찾기</button>
+                <button className="findID__navi--find" type="button" onClick={findPW}>비밀번호 찾기</button>
             </div>
         </div>
     );

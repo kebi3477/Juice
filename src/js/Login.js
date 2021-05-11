@@ -1,7 +1,6 @@
 import React from 'react';
+import {setState, state} from './formModule';
 import './Login.css';
-
-let state = {};
 
 const loging = () => {
     fetch('/user/login', {
@@ -14,7 +13,13 @@ const loging = () => {
     })
     .then(res => res.json())
     .then(res => {
-        console.log(res);
+        if(res.result === 'success') {
+            //로그인 성공 시
+        } else if(res.result === 'null') {
+            //값이 비었을 떄
+        } else {
+            //에러 났을 때
+        }
     })
 }
 
@@ -28,10 +33,6 @@ const findID = () => {
 
 const findPW = () => {
     console.log('findPW click');
-}
-
-const setState = e => {
-    state[e.target.name] = e.target.value
 }
 
 function Login(){

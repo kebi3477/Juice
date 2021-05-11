@@ -61,7 +61,7 @@ router.post('/findId', function(req, res) {
             if(err || !rows.length) {
                 status.result = 'fail';
             } else {
-                status.id = rows.user_id;
+                status.id = rows[0].user_id;
                 status.result = 'success';
             }
             res.json(status);
