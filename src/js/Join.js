@@ -1,6 +1,7 @@
 import React from 'react';
 import './Join.css';
 import profileUrl from '../styles/images/common/profile.png';
+import sparkling from './sparkling.js';
 
 const joing = () => {
     console.log('joing click');
@@ -19,6 +20,7 @@ const pass = () => {
 }
 
 function Join(){
+
     return(
         <div className="join">
             {/* // 회원가입 타이틀 */}
@@ -52,15 +54,15 @@ function Join(){
             </div>
 
 
-            {/* // 아이디찾기 배경 */}
-            <svg className="findID__background" width="375" height="812.875" viewBox="0 0 375 812.875">
-                <path id="findID__background--element" data-name="패스 44" d="M0,0V275.116c33.2-4.838,83.262-14.822,100.171-32.535,26.117-27.359,28.221-102.99,130.854-106.781C282.832,133.886,335.3,109.067,375,74.376V0Z" fill="#fccb1c"/>
-                <path id="findID__background--element" data-name="패스 45" d="M103.333,262.529C76,271.2,34.667,249.848,0,287.222v62.49c47.232-4.33,89.593,21.872,129,27.941,60.667,9.343,140.333-4,156.333-114.457,10.576-73.008,58.433-103.88,89.667-116.422V81c-39.7,34.691-92.86,85.847-144.667,87.761C127.7,172.552,139.367,251.091,103.333,262.529Z" transform="translate(0 -53.971)" fill="#f9b61b"/>
-                <path id="findID__background--element" data-name="패스 46" d="M286.667,371.194C273,453.616,216.333,480.645,155.667,471.3c-39.407-6.069-109-34.37-155.667-9.254V985.522H375V259.11C343.766,271.652,298.734,298.418,286.667,371.194Z" transform="translate(0 -172.647)" fill="#f5a21a"/>
+            {/* // 회원가입 배경 */}
+            <svg className="join__background" width="375" height="812.875" viewBox="0 0 375 812.875">
+                <path id="join__background--element" data-name="패스 44" d="M0,0V275.116c33.2-4.838,83.262-14.822,100.171-32.535,26.117-27.359,28.221-102.99,130.854-106.781C282.832,133.886,335.3,109.067,375,74.376V0Z" fill="#fccb1c"/>
+                <path id="join__background--element" data-name="패스 45" d="M103.333,262.529C76,271.2,34.667,249.848,0,287.222v62.49c47.232-4.33,89.593,21.872,129,27.941,60.667,9.343,140.333-4,156.333-114.457,10.576-73.008,58.433-103.88,89.667-116.422V81c-39.7,34.691-92.86,85.847-144.667,87.761C127.7,172.552,139.367,251.091,103.333,262.529Z" transform="translate(0 -53.971)" fill="#f9b61b"/>
+                <path id="join__background--element" data-name="패스 46" d="M286.667,371.194C273,453.616,216.333,480.645,155.667,471.3c-39.407-6.069-109-34.37-155.667-9.254V985.522H375V259.11C343.766,271.652,298.734,298.418,286.667,371.194Z" transform="translate(0 -172.647)" fill="#f5a21a"/>
             </svg>
 
-            {/* // 아이디찾기 입자 */}
-            <svg className="findID__particle" width="335.945" height="274.712" viewBox="0 0 335.945 274.712">
+            {/* // 회원가입 입자 */}
+            <svg className="join__particle" width="335.945" height="274.712" viewBox="0 0 335.945 274.712">
                 <g id="그룹_38" data-name="그룹 38" transform="translate(0.334 210.143)">
                     <path className="particle__bubble" data-name="패스 47" d="M99.513,762.026a12.263,12.263,0,1,1,12.263-12.263A12.277,12.277,0,0,1,99.513,762.026Zm0-23.192a10.928,10.928,0,1,0,10.928,10.928A10.941,10.941,0,0,0,99.513,738.835Z" transform="translate(-87.25 -737.5)" fill="#f4e4d2"/>
                 </g>

@@ -1,5 +1,6 @@
 import React from 'react';
 import './FindID.css';
+import sparkling from './sparkling.js';
 
 const findID = () => {
     console.log('findID click');
