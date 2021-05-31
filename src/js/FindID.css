@@ -1,17 +1,25 @@
 /* 아이디찾기  CSS */
-.findID{ width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.findID{ width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
 
-/* 아이디찾기 로고 CSS */
-.findID__logo{ position: relative; width: 100px; height: 100px; border-radius: 70%; display: flex; justify-content: center; align-items: center; overflow: hidden; border: 1px solid #000; }
-.findID__logo--img{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+/* 아이디찾기 타이틀 CSS */
+.findID__title{ margin-bottom: 2.875rem; width: calc(100% - 4rem); }
+.findID__title--text{ font-size: 2rem; font-weight: 700; color: #fff; }
+.findID__subtitle--text{ font-size: 1rem; font-weight: normal; color: #fff; }
+
+/* 아이디찾기 컨텐츠 CSS */
+.findID__contents{ width: 100%; height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #fff; border-top-left-radius: 1.25rem; border-top-right-radius: 1.25rem; }
 
 /* 아이디찾기 폼 CSS */
 .findID__form{ margin-top: 5.75rem; width: 100%; display: grid; grid-template-rows: repeat(1fr, 3); place-items: center; }
-.findID__form--input{ margin-top: 0.5rem; padding: 1rem; width: calc(100% - 60px); border-radius: 1.625rem; border: 1px solid #000; overflow: hidden; }
-.findID__form--input::placeholder{ text-align: center; }
-.findID__form--input-login{ margin-top: 1rem; cursor: pointer; background-color: #fff; } 
+.findID__form--input{ margin-top: 0.5rem; padding: 0.75rem; width: calc(100% - 60px); font-size: 1rem; font-weight: normal; border-radius: 0.75rem; border: 1.5px solid var(--main-color1); overflow: hidden; }
+.findID__form--input::placeholder{ text-align: left; }
+.findID__form--input-findID{ margin-top: 1rem; cursor: pointer; font-size: 1.125rem; font-weight: 500; color: #fff; background-color: var(--main-color1); } 
 
 /* 아이디찾기 메뉴 CSS */
 .findID__navi{ margin-top: 1rem; display: grid; grid-template-rows: repeat(1fr, 2); place-items: center; }
-.findID__navi > *{ font-size: 1rem; font-weight: normal; }
+.findID__navi > *{ font-size: 0.875rem; font-weight: normal; color: var(--nickel-color); }
 .findID__navi--find{ display: flex; place-items: center; }
+
+/* 아이디찾기 배경 */
+.findID__background{ position: absolute; left: 0; bottom: 0; width: 100%; z-index: -10; }
+.findID__particle{ position: absolute; left: 0; top: 0; width: 100%; z-index: 10; transform: translateY(20px); }

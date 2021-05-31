@@ -5,7 +5,6 @@ const router = express.Router();
 const status = {};
 
 db.connect(conn);
-
 router.post('/login', function(req, res) {
     const user = req.body;
     if(!user.id || !user.pw) {
