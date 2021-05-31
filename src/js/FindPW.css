@@ -22,4 +22,8 @@
 
 /* 비밀번호찾기 배경 */
 .findPW__background{ position: absolute; left: 0; bottom: 0; width: 100%; z-index: -10; }
+<<<<<<< HEAD
 .findPW__particle{ position: absolute; left: 0; top: 0; width: 100%; z-index: 10; transform: translateY(20px); }
+=======
+.findPW__particle{ position: absolute; left: 0; top: 0; width: 100%; z-index: 10; transform: translateY(20px); }
+>>>>>>> ff63963d8dc97a23b8ea639162737c617737c12f
