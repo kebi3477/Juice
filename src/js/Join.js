@@ -1,24 +1,16 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import './Join.css';
 import sparkling from './sparkling.js';
 
-const joing = () => {
-    console.log('joing click');
-}
-
-const next = () => {
-    console.log('next click');
-}
-
-const file = () => {
-    console.log('file click');
-}
-
-const pass = () => {
-    console.log('pass click');
-}
-
 function Join(){
+
+    const history = useHistory();
+    
+    const findPW = () => {
+        let path = `./findPW`; 
+        history.push(path);
+    }
 
     return(
         <div className="join">

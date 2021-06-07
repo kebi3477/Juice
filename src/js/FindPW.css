@@ -22,4 +22,4 @@
 /* 비밀번호찾기 메뉴 CSS */
 .findPW__navi{ margin-top: 1rem; display: grid; grid-template-rows: repeat(1fr, 2); place-items: center; }
 .findPW__navi > *{ font-size: 0.875rem; font-weight: normal; color: var(--nickel-color); }
-.findPW__navi--find{ display: flex; place-items: center; }
+.findPW__navi--find{ cursor: pointer; display: flex; place-items: center; }

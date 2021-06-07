@@ -22,4 +22,5 @@
 .login__navi{ margin-top: 1.25rem; display: grid; grid-template-rows: repeat(1fr, 2); place-items: center; }
 .login__navi > *{ font-size: 0.875rem; font-weight: normal; color: #fff; }
 .login__navi--find{ margin-top: 1rem; display: flex; place-items: center; }
-.login__navi--find button{ color: #fff; }
+.login__navi--find button{ cursor: pointer; color: #fff; }
+.login__navi--join{ cursor: pointer; }

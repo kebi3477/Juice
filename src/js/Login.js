@@ -1,24 +1,31 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import './Login.css';
 import sparkling from './sparkling.js';
 
-const loging = () => {
-    console.log('loging click');
-}
-
-const join = () => {
-    console.log('join click');
-}
-
-const findID = () => {
-    console.log('findID click');
-}
-
-const findPW = () => {
-    console.log('findPW click');
-}
-
 function Login(){
+
+    const history = useHistory();
+
+    const loging = () => {
+        console.log('loging click');
+    }
+    
+    const join = () => {
+        let path = `./join`; 
+        history.push(path);
+    }
+    
+    function findID(){
+        let path = `./findID`; 
+        history.push(path);
+    }
+    
+    const findPW = () => {
+        let path = `./findPW`; 
+        history.push(path);
+    }
+
     return(
         <div className="login">
             <div className="login__back">

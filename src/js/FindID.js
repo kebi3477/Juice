@@ -1,16 +1,17 @@
 import React from 'react';
+import { useHistory } from "react-router-dom";
 import './FindID.css';
 import sparkling from './sparkling.js';
 
-const findID = () => {
-    console.log('findID click');
-}
-
-const findPW = () => {
-    console.log('findPW click');
-}
-
 function FindID(){
+
+    const history = useHistory();
+    
+    const findPW = () => {
+        let path = `./findPW`; 
+        history.push(path);
+    }
+    
     return(
         <div className="findID">
             <div className="findID__back">
@@ -72,12 +73,12 @@ function FindID(){
                     <form className="findID__form" method="POST">
                         <input className="findID__form--input findID__form--input-name" type="text" placeholder="이름" />
                         <input className="findID__form--input findID__form--input-email" type="text" placeholder="이메일" />
-                        <button className="findID__form--input findID__form--input-findID" type="button" onClick={findPW}>아이디 찾기</button>
+                        <button className="findID__form--input findID__form--input-findID" type="button">아이디 찾기</button>
                     </form>
                     
                     {/* // 아이디찾기 메뉴 */}
                     <div className="findID__navi">
-                        <button className="findID__navi--find" type="button" onClick={findID}>비밀번호 찾기</button>
+                        <button className="findID__navi--find" type="button" onClick={findPW}>비밀번호 찾기</button>
                     </div>
                 </div>
             </div>
