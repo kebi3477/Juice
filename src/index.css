@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-*{ margin: 0; padding: 0; box-sizing: border-box; list-style: none; text-decoration: none; color: #333; font-size: 100%; font-weight: normal; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; outline: none; border: none; background-color: transparent; }
-=======
 :root{
     --main-color1: #f5a315;
     --main-color2: #fcca14;
@@ -59,4 +56,3 @@
 
 *{ margin: 0; padding: 0; box-sizing: border-box; list-style: none; text-decoration: none; color: var(--black-color); font-family: 'Noto Sans CJK KR'; font-size: 100%; font-weight: normal; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; outline: none; border: none; background-color: transparent; }
 
->>>>>>> ff63963d8dc97a23b8ea639162737c617737c12f
