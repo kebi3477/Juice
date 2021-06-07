@@ -1,29 +1,28 @@
 /* 회원가입  CSS */
-.join{ width: 100%; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: center; }
+.join{ margin: 0 auto; position: relative; width: 420px; height: 800px; overflow-x: hidden; background-color: #f5a21a; }
+.join__back{ position: absolute; left: 0; top: 0; z-index: 10; width: 100%; overflow-x: hidden; }
+.join__front{ position: absolute; left: 0; top: 0; z-index: 20; width: 100%; height: 100%; overflow-x: hidden; display: grid; grid-template-rows: 0.5fr 2fr;  }
+
+/* 회원가입 배경 CSS */
+.join__background{ position: relative; z-index: 10; width: 100%; }
+.join__particle{ position: absolute; left: 0; top: 0; width: 100%; z-index: 15; overflow: visible; }
 
 /* 회원가입 타이틀 CSS */
-.join__title{ margin-bottom: 2.875rem; width: calc(100% - 4rem); }
+.join__title{ margin-top: 80px; margin-bottom: 46px; padding: 0px 36px; width: 100%; }
 .join__title--text{ font-size: 2rem; font-weight: 700; color: #fff; }
 .join__subtitle--text{ font-size: 1rem; font-weight: normal; color: #fff; }
 
 /* 회원가입 컨텐츠 CSS */
-.join__contents{ position: relative; z-index: 20; width: 100%; height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #fff; border-top-left-radius: 1.25rem; border-top-right-radius: 1.25rem; }
-
-/* 회원가입 폼 CSS */
-.join__form{ width: 100%; display: grid; grid-template-rows: repeat(1fr, 3); place-items: center; }
-.join__form--input{ margin-top: 0.5rem; padding: 0.75rem; width: calc(100% - 60px); font-size: 1rem; font-weight: normal; border-radius: 0.75rem; border: 1.5px solid var(--main-color1); overflow: hidden; }
+.join__contents{ padding: 86px 36px; position: relative; z-index: 20; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #fff; border-top-left-radius: 1.25rem; border-top-right-radius: 1.25rem; }
+.join__form{ width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.join__form--input{ margin-top: 8px; padding-left: 16px; height: 50px; width: 100%; font-size: 1rem; font-weight: normal; border-radius: 0.75rem; border: 1.5px solid var(--main-color1); overflow: hidden; }
 .join__form--input::placeholder{ text-align: left; }
-.join__form--input-join{ margin-top: 1rem; cursor: pointer; font-size: 1.125rem; font-weight: 500; color: #fff; background-color: var(--main-color1); } 
-.join__profile--pass{ margin-top: 1rem; cursor: pointer; font-size: 1.125rem; font-weight: 500; color: #fff; background-color: var(--main-color1); } 
+.join__form--input-join{ cursor: pointer; margin-top: 16px; height: 50px; cursor: pointer; font-size: 1.125rem; font-weight: 500; color: #fff; background-color: var(--main-color1); } 
 
 /* 회원가입 프로필 CSS */
-.join__profile{ width: 100%; display: flex; flex-direction: column; place-items: center; }
-.join__profile--picture{ position: relative; width: 128px; height: 128px; border-radius: 70%; display: flex; justify-content: center; align-items: center; overflow: hidden; border: 1px solid #000; }
-.join__profile--picture-img{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
+.join__profile{ width: 100%; display: none; flex-direction: column; place-items: center; }
+.join__profile--picture{ cursor: pointer; position: relative; width: 128px; height: 128px; border-radius: 70%; display: flex; justify-content: center; align-items: center; overflow: hidden; border: 1px solid var(--main-color1); }
+.join__profile--picture-img{ position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); object-fit: cover; }
 .join__profile--file{ width: 0; height: 0; overflow: hidden; }
-.join__profile--file-btn{ margin-top: 2rem; }
-
-
-/* 회원가입 배경 CSS */
-.join__background{ position: absolute; left: 0; bottom: 0; width: 100%; z-index: -10; }
-.join__particle{ position: absolute; left: 0; top: 10%; width: 100%; z-index: 10; overflow: visible; }
+.join__profile--file-btn{ cursor: pointer; margin-top: 32px; height: 50px; font-size: 18px; font-weight: 500; }
+.join__profile--pass{ cursor: pointer; font-size: 18px; font-weight: 500; background-color: var(--main-color1); color: #fff; }
