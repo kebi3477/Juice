@@ -8,12 +8,12 @@
 .findPW__particle{ position: absolute; left: 0; top: 0; width: 100%; z-index: 15; overflow: visible; }
 
 /* 비밀번호찾기 타이틀 CSS */
-.findPW__title{ margin-top: 80px; margin-bottom: 46px; padding: 0px 36px; width: 100%; }
+.findPW__title{ margin-top: 80px; margin-bottom: 46px; padding: 0px 30px; width: 100%; }
 .findPW__title--text{ font-size: 2rem; font-weight: 700; color: #fff; }
 .findPW__subtitle--text{ font-size: 1rem; font-weight: normal; color: #fff; }
 
 /* 비밀번호찾기 컨텐츠 CSS */
-.findPW__contents{ padding: 86px 36px; position: relative; z-index: 20; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #fff; border-top-left-radius: 1.25rem; border-top-right-radius: 1.25rem; }
+.findPW__contents{ padding: 86px 30px; position: relative; z-index: 20; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #fff; border-top-left-radius: 1.25rem; border-top-right-radius: 1.25rem; }
 .findPW__form{ width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .findPW__form--input{ margin-top: 8px; padding-left: 16px; height: 50px; width: 100%; font-size: 1rem; font-weight: normal; border-radius: 0.75rem; border: 1.5px solid var(--main-color1); overflow: hidden; }
 .findPW__form--input::placeholder{ text-align: left; }
