@@ -1,6 +1,6 @@
 :root{
-    -main-color1: #EA5515;
-    -main-color2: #F5A21A;
+    --main-color1: #EA5515;
+    --main-color2: #F5A21A;
 }
 
 body{ background-color: #aaa; }

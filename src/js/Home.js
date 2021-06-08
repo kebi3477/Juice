@@ -7,7 +7,6 @@ function Home(){
 
     const history = useHistory();
     
-    
     return(
         <div className="home">
             <div className="home__back">
@@ -79,6 +78,12 @@ function Home(){
                             <div className="home__popular--post">
                                 <div className="home__popular--post-frame">
                                     <img className="home__popular--post-img" src='https://images.unsplash.com/photo-1619537902390-6c400f795262?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80' alt="thumnail" />
+                                    <div className="home__popular--post-member">
+                                        <svg width="13.379" height="13.776" viewBox="0 0 13.379 13.776">
+                                            <path id="패스_42" data-name="패스 42" d="M15.709,13.3a3.823,3.823,0,1,0-3.376,0,6.143,6.143,0,0,0-4.9,5.805.524.524,0,1,0,1.049,0,5.283,5.283,0,0,1,5.541-4.964A5.283,5.283,0,0,1,19.562,19.1a.524.524,0,1,0,1.049,0A6.143,6.143,0,0,0,15.709,13.3ZM11.247,9.875a2.774,2.774,0,1,1,2.774,2.774A2.777,2.777,0,0,1,11.247,9.875Z" transform="translate(-7.331 -5.953)" fill="#fff" stroke="#fff" stroke-width="0.2"/>
+                                        </svg>
+                                        <p className="home__popular--post-num">87</p>
+                                    </div>
                                 </div>
 
                                 <div className="home__popular--post-info">
@@ -204,6 +209,82 @@ function Home(){
                                     <p className="home__subject--contents-text">배구</p>
                                 </div>
                             </div>
+
+                            <div className="home__subject--contents-items">
+                                <div className="home__subject--contents-frame">
+                                    <img className="home__subject--contents-img"  src='https://images.unsplash.com/photo-1619537902390-6c400f795262?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80' alt="thumnail" />
+                                </div>
+                                
+                                <div className="home__subject--contents-info">
+                                    <p className="home__subject--contents-text">야구</p>
+                                </div>
+                            </div>
+                            
+                            <div className="home__subject--contents-items">
+                                <div className="home__subject--contents-frame">
+                                    <img className="home__subject--contents-img"  src='https://images.unsplash.com/photo-1619537902390-6c400f795262?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80' alt="thumnail" />
+                                </div>
+
+                                <div className="home__subject--contents-info">
+                                    <p className="home__subject--contents-text">축구</p>
+                                </div>
+                            </div>
+
+                            <div className="home__subject--contents-items">
+                                <div className="home__subject--contents-frame">
+                                    <img className="home__subject--contents-img"  src='https://images.unsplash.com/photo-1619537902390-6c400f795262?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80' alt="thumnail" />
+                                </div>
+
+                                <div className="home__subject--contents-info">
+                                    <p className="home__subject--contents-text">농구</p>
+                                </div>
+                            </div>
+
+                            <div className="home__subject--contents-items">
+                                <div className="home__subject--contents-frame">
+                                    <img className="home__subject--contents-img"  src='https://images.unsplash.com/photo-1619537902390-6c400f795262?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80' alt="thumnail" />
+                                </div>
+
+                                <div className="home__subject--contents-info">
+                                    <p className="home__subject--contents-text">배구</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="home__modal">
+                <div className="home__modal--header">
+                    <svg className="home__modal--header-svg" width="25.573" height="22.455" viewBox="0 0 25.573 22.455">
+                        <g id="그룹_36" data-name="그룹 36" transform="translate(-6.032 -7.352)">
+                            <path id="패스_40" data-name="패스 40" d="M31.1,18.14v.881H8.319l8.919,9.443-.583.617L6.72,18.58l9.935-10.5.583.617L8.319,18.14Z" fill="none" stroke="#000" stroke-width="1"/>
+                        </g>
+                    </svg>
+                    <p className="home__modal--header-title">인기 그룹</p>
+                </div>
+
+                <div className="home__modal--contents">
+                    <div className="home__popular--post">
+                        <div className="home__popular--post-frame">
+                            <img className="home__popular--post-img" src='https://images.unsplash.com/photo-1619537902390-6c400f795262?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=701&q=80' alt="thumnail" />
+                            <div className="home__popular--post-member">
+                                <svg width="13.379" height="13.776" viewBox="0 0 13.379 13.776">
+                                    <path id="패스_42" data-name="패스 42" d="M15.709,13.3a3.823,3.823,0,1,0-3.376,0,6.143,6.143,0,0,0-4.9,5.805.524.524,0,1,0,1.049,0,5.283,5.283,0,0,1,5.541-4.964A5.283,5.283,0,0,1,19.562,19.1a.524.524,0,1,0,1.049,0A6.143,6.143,0,0,0,15.709,13.3ZM11.247,9.875a2.774,2.774,0,1,1,2.774,2.774A2.777,2.777,0,0,1,11.247,9.875Z" transform="translate(-7.331 -5.953)" fill="#fff" stroke="#fff" stroke-width="0.2"/>
+                                </svg>
+                                <p className="home__popular--post-num">87</p>
+                            </div>
+                        </div>
+
+                        <div className="home__popular--post-info">
+                        <p className="home__popular--post-title">그룹이름</p>
+                        <p className="home__popular--post-text">소개 한줄로 해서 한줄 넘어가면 ...</p>
+                        <p className="home__popular--post-join">
+                            참여하기
+                            <svg xmlns="http://www.w3.org/2000/svg" width="7.003" height="9.83" viewBox="0 0 7.003 9.83">
+                                <path id="패스_34" data-name="패스 34" d="M-840,468.941l5.869-4.314L-840,459.9" transform="translate(840.313 -459.513)" fill="none" stroke="#000" stroke-width="1"/>
+                            </svg>
+                        </p>
                         </div>
                     </div>
                 </div>
