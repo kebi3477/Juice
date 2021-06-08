@@ -59,7 +59,7 @@ function Home(){
                 {/* // 홈 타이틀 */}
                 <div className="home__header">
                     <p className="home__title"><strong>주</strong>변의 있는 사람과 <br></br> 함께하는 <strong>스</strong>포츠</p>
-                    <input className="home__search" type="text" name="keyword" autoComplete="off" />
+                    <input className="home__searchBar" type="text" name="keyword" autoComplete="off" />
                 </div>
 
                 <div className="home__contents">
@@ -285,6 +285,111 @@ function Home(){
                                 <path id="패스_34" data-name="패스 34" d="M-840,468.941l5.869-4.314L-840,459.9" transform="translate(840.313 -459.513)" fill="none" stroke="#000" stroke-width="1"/>
                             </svg>
                         </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="home__search">
+                <div className="home__search--header">
+                    <svg className="home__search--header-svg" width="19.315" height="13.44" viewBox="0 0 19.315 13.44">
+                        <g transform="translate(19.315 13.44) rotate(180)">
+                            <path d="M-1152.519,479.8l1.3-1.3-1.3-1.3-5.421-5.421-1.3,1.3,5.422,5.421-5.422,5.421,1.3,1.3Z" transform="translate(1170.535 -471.778)"/>
+                            <g transform="translate(0 5.802)">
+                                <rect width="17.171" height="1.836" fill="#231f20"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p className="home__search--header-title">경기종목</p>
+                </div>
+
+                <div className="home__search--contents">
+                    <div className="home__search--bar">
+                        <input className="home__search--bar-input" type="text" placeholder="종목 이름을 검색하세요." />
+                        <svg className="home__search--bar-button" width="13.393" height="14.021" viewBox="0 0 13.393 14.021">
+                            <path id="패스_4" data-name="패스 4" d="M-959.135,539.513l-3.776-3.776a5.6,5.6,0,0,0,1.617-3.937,5.623,5.623,0,0,0-5.617-5.617,5.623,5.623,0,0,0-5.617,5.617,5.623,5.623,0,0,0,5.617,5.617,5.583,5.583,0,0,0,3.252-1.046l3.833,3.833Zm-12.416-7.713a4.645,4.645,0,0,1,4.64-4.64,4.645,4.645,0,0,1,4.64,4.64,4.645,4.645,0,0,1-4.64,4.64A4.645,4.645,0,0,1-971.551,531.8Z" transform="translate(972.528 -526.183)" fill="#ddd"/>
+                        </svg>
+                    </div>
+
+                    <div className="home__search--keyword">
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>축구</strong>(soccer)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>야구</strong>(baseball)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>농구</strong>(basketball)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>배구</strong>(volleyball)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>탁구</strong>(table tennis)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>필드하키</strong>(field hockey)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>럭비</strong>(football)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>족구</strong>(foot volleyball)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items focus">
+                            <p className="home__search--keyword-text"><strong>배드민턴</strong>(badminton)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>수영</strong>(swimming)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>자전거</strong>(bicycle)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>승마</strong>(riding)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>테니스</strong>(tennis)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>유도</strong>(judo)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>골프</strong>(golf)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>레슬링</strong>(wrestling)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>검도</strong>(kendo)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>복싱</strong>(boxing)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>킥복싱</strong>(kickboxing)</p>
+                        </div>
+                        
+                        <div className="home__search--keyword-items">
+                            <p className="home__search--keyword-text"><strong>태권도</strong>(taekwondo)</p>
                         </div>
                     </div>
                 </div>

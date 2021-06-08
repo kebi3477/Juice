@@ -1,6 +1,10 @@
 :root{
     --main-color1: #EA5515;
     --main-color2: #F5A21A;
+    --main-color3: #F4E4D2;
+    --main-black: #000000;
+    --main-gray: #666666;
+    --main-white: #ffffff;
 }
-
+*::-webkit-scrollbar{ width: 0; }
 body{ background-color: #aaa; }
