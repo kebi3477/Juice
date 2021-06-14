@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from "react-router-dom";
 import './Join.css';
 import sparkling from './sparkling.js';
@@ -11,6 +11,9 @@ function Join(){
         let path = `./findPW`; 
         history.push(path);
     }
+
+    const [isBlock, setIsBlock] = useState(false);
+    const joinClick = () => { setIsBlock(isBlock => !isBlock); };
 
     return(
         <div className="join">
@@ -70,17 +73,17 @@ function Join(){
                 {/* // 회원가입 컨텐츠 */}
                 <div className="join__contents">
                     {/* // 회원가입 폼 */}
-                    <form className="join__form" method="POST">
+                    <form className={isBlock ? 'join__form' : 'join__form--active'} method="POST">
                         <input className="join__form--input join__form--input-id" type="text" placeholder="아이디" />
                         <input className="join__form--input join__form--input-pw" type="password" placeholder="비밀번호" />
                         <input className="join__form--input join__form--input-confirm" type="password" placeholder="비밀번호 재확인" />
                         <input className="join__form--input join__form--input-email" type="text" placeholder="이메일" />
                         <input className="join__form--input join__form--input-name" type="text" placeholder="이름(실명)" />
-                        <button className="join__form--input join__form--input-join" type="button">회원가입</button>
+                        <button className="join__form--input join__form--input-join" type="button" onClick={joinClick}>회원가입</button>
                     </form>
                     
                     {/* // 회원가입 프로필 */}
-                    <div className="join__profile">
+                    <div className={isBlock ? 'join__profile--active' : 'join__profile'}>
                         <div className="join__profile--picture">
                             <svg className="join__profile--picture-img" width="74.415" height="64.796" viewBox="0 0 74.415 64.796">
                                 <g id="그룹_62" data-name="그룹 62" transform="translate(1301.523 -563.797)">
@@ -90,7 +93,6 @@ function Join(){
                                     </g>
                                 </g>
                             </svg>
-
                         </div>
 
                         <input className="join__profile--file" type="file" />
