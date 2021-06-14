@@ -12,8 +12,13 @@ function Join(){
         history.push(path);
     }
 
-    const [isBlock, setIsBlock] = useState(false);
-    const joinClick = () => { setIsBlock(isBlock => !isBlock); };
+    const [profileIsBlock, setProfileIsBlock] = useState({display: 'none'});
+    const [formIsBlock, setFormIsBlock] = useState({display: 'flex'});
+    const joinClick = () => { 
+        formIsBlock.display === 'flex' ? setFormIsBlock({display: 'none'}) : setFormIsBlock({display: 'flex'});
+        profileIsBlock.display === 'flex' ? setProfileIsBlock({display: 'none'}) : setProfileIsBlock({display: 'flex'});
+    };
+    
 
     return(
         <div className="join">
@@ -73,7 +78,7 @@ function Join(){
                 {/* // 회원가입 컨텐츠 */}
                 <div className="join__contents">
                     {/* // 회원가입 폼 */}
-                    <form className={isBlock ? 'join__form' : 'join__form--active'} method="POST">
+                    <form className='join__form' style={formIsBlock} method="POST">
                         <input className="join__form--input join__form--input-id" type="text" placeholder="아이디" />
                         <input className="join__form--input join__form--input-pw" type="password" placeholder="비밀번호" />
                         <input className="join__form--input join__form--input-confirm" type="password" placeholder="비밀번호 재확인" />
@@ -83,7 +88,7 @@ function Join(){
                     </form>
                     
                     {/* // 회원가입 프로필 */}
-                    <div className={isBlock ? 'join__profile--active' : 'join__profile'}>
+                    <div className='join__profile' style={profileIsBlock}>
                         <div className="join__profile--picture">
                             <svg className="join__profile--picture-img" width="74.415" height="64.796" viewBox="0 0 74.415 64.796">
                                 <g id="그룹_62" data-name="그룹 62" transform="translate(1301.523 -563.797)">

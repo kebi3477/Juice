@@ -14,15 +14,13 @@
 
 /* 회원가입 컨텐츠 CSS */
 .join__contents{ padding: 86px 30px; position: relative; z-index: 20; width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; background-color: #fff; border-top-left-radius: 1.25rem; border-top-right-radius: 1.25rem; }
-.join__form{ width: 100%; display: none; flex-direction: column; justify-content: center; align-items: center; }
-.join__form--active{ width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.join__form{ width: 100%; display: flex; flex-direction: column; justify-content: center; align-items: center; }
 .join__form--input{ margin-top: 8px; padding-left: 16px; height: 50px; width: 100%; font-size: 1rem; font-weight: normal; border-radius: 0.75rem; border: 1.5px solid var(--main-color1); overflow: hidden; }
 .join__form--input::placeholder{ text-align: left; }
 .join__form--input-join{ padding: 0; cursor: pointer; margin-top: 16px; height: 50px; cursor: pointer; font-size: 1.125rem; font-weight: 500; color: #fff; background-color: var(--main-color1); } 
 
 /* 회원가입 프로필 CSS */
-.join__profile{ width: 100%; display: none; flex-direction: column; place-items: center; }
-.join__profile--active{ animation: fadeUp 600ms ease-out; width: 100%; display: flex; flex-direction: column; place-items: center; }
+.join__profile{ animation: fadeUp 600ms ease-out; width: 100%; display: none; flex-direction: column; place-items: center; }
 .join__profile--picture{ cursor: pointer; position: relative; width: 128px; height: 128px; border-radius: 70%; display: flex; justify-content: center; align-items: center; overflow: hidden; border: 1px solid var(--main-color1); }
 .join__profile--picture-img{ position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); object-fit: cover; }
 .join__profile--file{ width: 0; height: 0; overflow: hidden; }
