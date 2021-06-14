@@ -1,16 +1,8 @@
 import React, { useState } from 'react';
-import { useHistory } from "react-router-dom";
 import './Join.css';
 import sparkling from './sparkling.js';
 
 function Join(){
-
-    const history = useHistory();
-    
-    const findPW = () => {
-        let path = `./findPW`; 
-        history.push(path);
-    }
 
     const [profileIsBlock, setProfileIsBlock] = useState({display: 'none'});
     const [formIsBlock, setFormIsBlock] = useState({display: 'flex'});
@@ -19,7 +11,6 @@ function Join(){
         profileIsBlock.display === 'flex' ? setProfileIsBlock({display: 'none'}) : setProfileIsBlock({display: 'flex'});
     };
     
-
     return(
         <div className="join">
             <div className="join__back">

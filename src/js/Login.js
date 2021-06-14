@@ -12,18 +12,15 @@ function Login(){
     }
     
     const join = () => {
-        let path = `./join`; 
-        history.push(path);
+        history.push('./join');
     }
     
     function findID(){
-        let path = `./findID`; 
-        history.push(path);
+        history.push('./findID');
     }
     
     const findPW = () => {
-        let path = `./findPW`; 
-        history.push(path);
+        history.push('./findPW');
     }
 
     return(
