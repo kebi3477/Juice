@@ -79,7 +79,7 @@ function Join(){
                     </form>
                     
                     {/* // 회원가입 프로필 */}
-                    <div className='join__profile' style={profileIsBlock}>
+                    <div className='join__profile' style={profileIsBlock}> 
                         <div className="join__profile--picture">
                             <svg className="join__profile--picture-img" width="74.415" height="64.796" viewBox="0 0 74.415 64.796">
                                 <g id="그룹_62" data-name="그룹 62" transform="translate(1301.523 -563.797)">
