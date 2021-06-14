@@ -15,18 +15,17 @@ const findID = () => {
     .then(res => res.json())
     .then(res => {
         if(res.result === 'success') {
-            console.log(res.user_id);
-            //아이디 찾기 성공
+            alert(`아이디는 ${res.id} 입니다!`);
         } else if(res.result === 'null') {
-            //값이 비었음
+            alert('값이 비었습니다!');
         } else {
-            //아이디 찾기 실패
+            alert('일시적인 오류입니다!');
         }
     })
 }
 
 const findPW = () => {
-    console.log('findPW click');
+    window.location.href = '/findPw';
 }
 
 function FindID(){
@@ -44,12 +43,12 @@ function FindID(){
                 <form className="findID__form" method="POST">
                     <input className="findID__form--input findID__form--input-name" type="text" placeholder="이름" onChange={setState} name="name"/>
                     <input className="findID__form--input findID__form--input-email" type="text" placeholder="이메일" onChange={setState} name="email"/>
-                    <button className="findID__form--input findID__form--input-findID" type="button" onClick={findPW}>아이디 찾기</button>
+                    <button className="findID__form--input findID__form--input-findID" type="button" onClick={findID}>아이디 찾기</button>
                 </form>
                 
                 {/* // 아이디찾기 메뉴 */}
                 <div className="findID__navi">
-                    <button className="findID__navi--find" type="button" onClick={findID}>비밀번호 찾기</button>
+                    <button className="findID__navi--find" type="button" onClick={findPW}>비밀번호 찾기</button>
                 </div>
             </div>
 

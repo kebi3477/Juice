@@ -4,7 +4,7 @@ import './FindPW.css';
 import sparkling from './sparkling.js';
 
 const findID = () => {
-    console.log('findID click');
+    window.location.href = '/findId';
 }
 
 const findPW = () => {
@@ -19,11 +19,11 @@ const findPW = () => {
     .then(res => res.json())
     .then(res => {
         if(res.result === 'success') {
-            //비밀번호 찾기 성공
+            alert('비밀번호는 입니다!');
         } else if(res.result === 'null') {
-            //값이 비었음
+            alert('값이 비었습니다!');
         } else {
-            //아이디 찾기 실패
+            alert('일시적인 오류입니다!');
         }
     })
 }

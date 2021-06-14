@@ -32,14 +32,14 @@ function Join(){
             {/* // 회원가입 컨텐츠 */}
             <div className="join__contents">
                 {/* // 회원가입 폼 */}
-                {/* <form className="join__form" method="POST">
+                <form className="join__form" method="POST">
                     <input className="join__form--input join__form--input-id" type="text" placeholder="아이디" />
                     <input className="join__form--input join__form--input-pw" type="password" placeholder="비밀번호" />
                     <input className="join__form--input join__form--input-confirm" type="password" placeholder="비밀번호 재확인" />
                     <input className="join__form--input join__form--input-email" type="text" placeholder="이메일" />
                     <input className="join__form--input join__form--input-name" type="text" placeholder="이름(실명)" />
                     <button className="join__form--input join__form--input-join" type="button">회원가입</button>
-                </form> */}
+                </form>
                 
                 {/* // 회원가입 프로필 */}
                 <div className="join__profile">

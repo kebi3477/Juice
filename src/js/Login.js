@@ -15,25 +15,25 @@ const loging = () => {
     .then(res => res.json())
     .then(res => {
         if(res.result === 'success') {
-            //로그인 성공 시
+            window.location.href = 'home' ;
         } else if(res.result === 'null') {
-            //값이 비었을 떄
+            alert('값이 비었습니다!');
         } else {
-            //에러 났을 때
+            alert('일시적인 오류입니다!');
         }
     })
 }
 
 const join = () => {
-    console.log('join click');
+    window.location.href = '/join';
 }
 
 const findID = () => {
-    console.log('findID click');
+    window.location.href = '/findId';
 }
 
 const findPW = () => {
-    console.log('findPW click');
+    window.location.href = '/findPw';
 }
 
 function Login(){
