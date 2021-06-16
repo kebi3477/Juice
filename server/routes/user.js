@@ -31,25 +31,47 @@ router.post('/signUp', function(req, res) {
     const status = {};
     const user = req.body;
     let connFlag = false;
-    if(!user.id || !user.pw || !user.email || !user.name ) {
+    if(!user.id || !user.pw || !user.repw || !user.email || !user.name ) {
         status.result = 'null';
+    } else if(user.repw !== user.pw) {
+        status.result = 'unsafe';
     } else if(!/^[A-Za-z0-9]{6,12}$/.test(user.id)) {
-        status.result = 'fail';
-    } else if(!/^[A-Za-z0-9]{8,16}$/.test(user.password)) {
-        status.result = 'fail';
+        status.result = 'unsafe';
+    } else if(!/^[A-Za-z0-9]{8,16}$/.test(user.pw)) {
+        status.result = 'unsafe';
     } else if(!/^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i.test(user.email)) {
-        status.result = 'fail';
+        status.result = 'unsafe';
     } else {
-        const sql = `INSERT INTO user VALUES('${user.id}', '${user.password}', '${user.email}', '${user.name}', '${user.pic}')`;
+        let sql = "";
+        console.log('?');
         connFlag = true;
-        conn.query(sql, function(err) {
-            if(err) {
-                status.result = 'fail';
-            } else {
-                status.result = 'success';
-            }
-            res.json(status);
-        })
+        res.json(status);
+        // const query = new Promise(() => {
+        //     sql = `SELECT * FROM user WHERE user_id='${user.id}'`;
+        //     conn.query(sql, function(err, rows) {
+        //         if(rows.length > 0) {
+        //             status.result = 'overlap';
+        //             query.resolve(false);
+        //         } else {
+        //             query.resolve(true);
+        //         }
+        //     })
+        // })
+        // .then(flag => {
+        //     if(flag) {
+        //         sql = `INSERT INTO user VALUES('${user.id}', '${user.pw}', '${user.email}', '${user.name}', '')`;
+        //         conn.query(sql, function(err) {
+        //             if(err) {
+        //                 status.result = 'fail';
+        //             } else {
+        //                 status.result = 'success';
+        //             }
+        //         })
+        //     }
+        // })
+        // .then(() => {
+        //     res.json(status);
+        // })
     }
     if(!connFlag) res.json(status);
 })
