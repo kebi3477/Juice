@@ -6,6 +6,7 @@ import Join from './js/Join';
 import FindID from './js/FindID';
 import FindPW from './js/FindPW';
 import Home from './js/Home';
+import CreateGame from './js/CreateGame';	
 
 function App() {
 	return (
@@ -16,6 +17,7 @@ function App() {
 				<Route exact path="/join" component={Join} />
 				<Route exact path="/findid" component={FindID} />
 				<Route exact path="/findpw" component={FindPW} />
+				<Route exact path="/createGame" component={CreateGame} />
 			</Router>
 		</div>
 	);

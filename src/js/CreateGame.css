@@ -1,0 +1,73 @@
+/* 경기생성  CSS */
+.createGame{ margin: 0 auto; position: relative; width: 420px; height: 800px; overflow-x: hidden; background-color: #f5a21a; }
+.createGame__back{ position: absolute; left: 0; top: 0; z-index: 10; width: 100%; overflow-x: hidden; }
+.createGame__front{ position: absolute; left: 0; top: 0; z-index: 20; width: 100%; height: 100%; overflow-x: hidden; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+
+/* 경기생성 배경 CSS */
+.createGame__background{ position: relative; z-index: 10; width: 100%; }
+.createGame__particle{ position: absolute; left: 0; top: 0; width: 100%; z-index: 15; overflow: visible; }
+
+/* 경기생성 상단 CSS */
+.createGame__header{ padding: 20px; width: 100%; display: flex; justify-content: flex-start; align-items: center; }
+.createGame__header--title{ margin-left: 16px; font-size: 18px; font-weight: 700; color: #fff; }
+
+.createGame__contents{ margin-top: 50px; border-top-left-radius: 30px; width: 100%; height: 80vh; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; background-color: #fff; }
+.createGame__contents--header{ padding: 0px 30px; padding-top: 26px; padding-bottom: 12px; width: 100%; border-bottom: 1px solid #d1d1d1; }
+.createGame__contents--header-title{ font-size: 18px; font-weight: 500; }
+.createGame__contents--center{ padding: 20px 30px; width: 100%; display: grid; grid-template-columns: 1fr; row-gap: 20px; background-color: #fff; }
+.createGame__contents--title{ font-size: 14px; font-weight: 500; color: var(--main-black); }
+.createGame__contents--select{ margin-top: 12px; padding: 8px 16px; display: flex; justify-content: space-between; align-items: center; width: 100%; border-radius: 8px; border: 1px solid #d1d1d1; }
+.createGame__contents--select-title{ font-size: 16px; font-weight: 400; color: var(--main-black); }
+.createGame__contents--sex-wrapper{ padding-top: 12px; display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 8px; }
+.createGame__contents--sex-input{ position: absolute; z-index: -1; left: -200%; top: -200%; }
+.createGame__contents--sex-button{ cursor: pointer; padding: 8px 34px; display: flex; justify-content: center; align-items: center; border-radius: 8px; border: 1px solid #d1d1d1; font-size: 16px; font-weight: 400; }
+.createGame__contents--sex-button:hover{ transition: 300ms ease-in-out; background-color: var(--main-color2); border-color: var(--main-color2); color: #fff; }
+
+#createGame__contents--sex-1:checked ~ #createGame__contents--sex-button1{ background-color: var(--main-color2); border-color: var(--main-color2); color: #fff; }
+#createGame__contents--sex-2:checked ~ #createGame__contents--sex-button2{ background-color: var(--main-color2); border-color: var(--main-color2); color: #fff; }
+#createGame__contents--sex-3:checked ~ #createGame__contents--sex-button3{ background-color: var(--main-color2); border-color: var(--main-color2); color: #fff; }
+
+.createGame__contents--text{ padding: 20px 0px; border-top: 1px solid #d1d1d1; }
+
+.createGame__modal{ padding: 0px 30px; display: none; justify-content: center; align-items: center; position: absolute; z-index: 20; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
+.createGame__modal--contents{ width: 100%; overflow: hidden; background-color: #fff; border-radius: 10px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+.createGame__modal--header{ padding: 12px 36px; width: 100%; border-bottom: 1px solid #d1d1d1; }
+.createGame__modal--header-title{ font-size: 18px; font-weight: 500; color: #000; }
+.createGame__modal--center{ padding: 14px 46px; width: 100%; }
+.createGame__modal--footer{ width: 100%; display: grid; grid-template-columns: repeat(2, 1fr); border-top: 1px solid #d1d1d1; }
+.createGame__modal--footer > button{ padding: 12px 36px; }
+.createGame__modal--footer > button:last-child{ border-left: 1px solid #d1d1d1; color: var(--main-color2); }
+.createGame__modal--footer > button:hover{ transition: 300ms ease-in-out; background-color: var(--main-color2); border-color: var(--main-color2); color: #fff; }
+
+.createGame__modal--date-contents{ width: 100%; display: grid; grid-template-rows: auto 1fr; row-gap: 14px; }
+.createGame__modal--date-days{ width: 100%; display: grid; grid-template-columns: 2fr 1fr 1fr; }
+.createGame__modal--date-days *{ font-size: 24px; font-weight: 400; color: #d1d1d1; }
+.createGame__modal--date-days *.active{ color: #000; }
+
+.createGame__modal--age-contents{ padding: 12px 0px; display: grid; grid-template-rows: auto 1fr; row-gap: 12px; place-items: center; }
+.createGame__modal--age-num{ cursor: pointer; padding: 8px 0px; width: 100%; text-align: center; font-size: 24px; font-weight: 400; color: #d1d1d1; }
+.createGame__modal--age-num.active{ color: #000; box-shadow: 0px 0px 8px #f5a21a; }
+
+.createGame__modal--member-contents{ padding: 12px 0px; display: grid; grid-template-rows: auto 1fr; row-gap: 12px; place-items: center; }
+.createGame__modal--member-num{ cursor: pointer; padding: 8px 0px; width: 100%; text-align: center; font-size: 24px; font-weight: 400; color: #d1d1d1; }
+.createGame__modal--member-num.active{ color: #000; box-shadow: 0px 0px 8px #f5a21a; }
+
+.createGame__modal--cost-contents{ padding: 12px 0px; display: grid; grid-template-rows: auto 1fr; row-gap: 12px; place-items: center; }
+.createGame__modal--cost-num{ cursor: pointer; padding: 8px 0px; width: 100%; text-align: center; font-size: 24px; font-weight: 400; color: #d1d1d1; }
+.createGame__modal--cost-num.active{ color: #000; box-shadow: 0px 0px 8px #f5a21a; }
+
+.home__search{ position: absolute; left: 100%; top: 0; z-index: 20; width: 100%; height: 100%; background-color: #fff; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
+.home__search--header{ padding: 12px 24px; width: 100%; display: flex; justify-content: flex-start; align-items: center; }
+.home__search--header-svg{ cursor: pointer; transition: 300ms ease-in-out; transform: translateX(0); }
+.home__search--header-svg:hover{ transform: translateX(-25%); }
+.home__search--header-title{ margin-left: 18px; font-size: 18px; font-weight: 700; }
+.home__search--contents{ padding: 6px; width: 100%; height: 100%; overflow-y: auto; background-color: #F1F1F1; }
+.home__search--bar{ padding: 10px 18px; width: 100%; display: flex; justify-content: space-between; align-items: center; border-radius: 10px; background-color: #fff; }
+.home__search--bar-input{ width: 100%; font-size: 14px; font-weight: 400; }
+.home__search--bar-input::placeholder{ color: #DDDDDD; }
+.home__search--bar-button{ cursor: pointer; }
+.home__search--keyword{ margin-top: 6px; width: 100%; display: grid; grid-template-rows: 1fr; row-gap: 2px; overflow: hidden; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+.home__search--keyword-items{ padding: 10px 14px; width: 100%; background-color: #fff; }
+.home__search--keyword-items.focus *{ color: var(--main-color1); }
+.home__search--keyword-text{ font-size: 14px; font-weight: 400; }
+.home__search--keyword-text strong{ font-size: 16px; font-weight: 500; }
