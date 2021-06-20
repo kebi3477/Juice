@@ -201,6 +201,104 @@ function CreateGame(){
                 </div>
             </div>
 
+            <div className="createGame__view">
+                <div className="createGame__view--header">
+                    <button className="createGame__view--header-button">
+                        <svg width="19.315" height="13.44" viewBox="0 0 19.315 13.44">
+                            <g id="그룹_6" data-name="그룹 6" transform="translate(19.315 13.44) rotate(180)">
+                                <path id="패스_2" data-name="패스 2" d="M-1152.519,479.8l1.3-1.3-1.3-1.3-5.421-5.421-1.3,1.3,5.422,5.421-5.422,5.421,1.3,1.3Z" transform="translate(1170.535 -471.778)" fill="#fff"/>
+                                <g id="그룹_5" data-name="그룹 5" transform="translate(0 5.802)">
+                                <rect id="사각형_6" data-name="사각형 6" width="17.171" height="1.836" fill="#fff"/>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <h1 className="createGame__view--header-title">같이 배드민턴 칠 사람!</h1>
+                </div>
+
+                <div className="createGame__view--contents">
+                    <div className="createGame__view--contents-header">
+                        <div className="createGame__view--user-pic">
+                            
+                        </div>
+                        <div className="createGame__view--user-info">
+                            <p className="createGame__view--user-name">눈누난나</p>
+                            <p className="createGame__view--user-date">2021. 06. 21</p>
+                        </div>
+                    </div>
+
+                    <div className="createGame__view--contents-center">
+                        <div className="createGame__view--contents-wrapper">
+                            <div className="createGame__view--input-type1">
+                                <p className="createGame__view--input-title">경기종목</p>
+                                <p className="createGame__view--input-text">배드민턴(badminton)</p>
+                            </div>
+
+                            <div className="createGame__view--input-type2">
+                                <div className="createGame__view--input-wrapper">
+                                    <p className="createGame__view--input-title">경기날짜</p>
+                                    <p className="createGame__view--input-text">06월 21일</p>
+                                </div>
+
+                                <div className="createGame__view--input-wrapper">
+                                    <p className="createGame__view--input-title">경기시간</p>
+                                    <p className="createGame__view--input-text">12:11</p>
+                                </div>
+                            </div>
+
+                            <div className="createGame__view--input-type1">
+                                <p className="createGame__view--input-title">경기장소</p>
+                                <p className="createGame__view--input-text">한국폴리텍대학 제주캠퍼스</p>
+                            </div>
+
+                            <div className="createGame__view--input-type2">
+                                <div className="createGame__view--input-wrapper">
+                                    <p className="createGame__view--input-title">참여인원</p>
+                                    <p className="createGame__view--input-text">10명</p>
+                                </div>
+
+                                <div className="createGame__view--input-wrapper">
+                                    <p className="createGame__view--input-title">참여비용</p>
+                                    <p className="createGame__view--input-text">2,000원</p>
+                                </div>
+                            </div>
+
+                            <div className="createGame__view--input-type2">
+                                <div className="createGame__view--input-wrapper">
+                                    <p className="createGame__view--input-title">나이</p>
+                                    <p className="createGame__view--input-text">30대</p>
+                                </div>
+
+                                <div className="createGame__view--input-wrapper">
+                                    <p className="createGame__view--input-title">성별</p>
+                                    <p className="createGame__view--input-text">전체</p>
+                                </div>
+                            </div>
+
+                            <div className="createGame__view--input-type1">
+                                <p className="createGame__view--input-title">규칙설명</p>
+                                <p className="createGame__view--input-text">2인 또는 4인 경기로 이루어지며 자세한 설명은 당일날에 알려드리겠습니다.</p>
+                            </div>
+
+                            <div className="createGame__view--input-type1">
+                                <p className="createGame__view--input-title">준비물 리스트</p>
+                                <p className="createGame__view--input-text">자신이 사용할 배드민턴 채 갖고 와주세요. 배드민턴 공은 제가 넉넉하게 챙겨서 가겠습니다.</p>
+                            </div>
+
+                            <div className="createGame__view--input-type1">
+                                <p className="createGame__view--input-title">주의사항</p>
+                                <p className="createGame__view--input-text">되도록이면 운동복 또는 츄리닝으로 입고와주세요. 슬리퍼 또는 운동하기 힘든 옷차림으로 오시면 같이 운동하기 힘들어집니다.</p>
+                            </div>
+
+                            <div className="createGame__view--input-type1">
+                                <p className="createGame__view--input-title">현재 신청한 인원</p>
+                                <p className="createGame__view--input-text" style={{textAlign: 'right'}}>(0 / 10)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div className="createGame__modal--date createGame__modal" ref={dateDom}>
                 <div className="createGame__modal--contents">
                     <div className="createGame__modal--header">
