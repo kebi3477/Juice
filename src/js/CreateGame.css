@@ -1,5 +1,5 @@
 /* 경기생성  CSS */
-.createGame{ margin: 0 auto; position: relative; width: 420px; height: 800px; overflow-x: hidden; background-color: #f5a21a; }
+.createGame{ margin: 0 auto; position: relative; width: 420px; height: 100vh; overflow-x: hidden; background-color: #f5a21a; }
 .createGame__back{ position: absolute; left: 0; top: 0; z-index: 10; width: 100%; overflow-x: hidden; }
 .createGame__front{ position: absolute; left: 0; top: 0; z-index: 20; width: 100%; height: 100%; overflow-x: hidden; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
 

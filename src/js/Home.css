@@ -11,6 +11,8 @@
 .menu__btn.active .menu__btn--name{ color: var(--main-color2); }
 .menu__btn:hover *{ color: var(--main-color2); fill: var(--main-color2); transition: 300ms ease-in-out; }
 
+.createGroup__Button{ padding: 4px 8px; position: absolute; z-index: 30; right: 30px; top: 30px; background-color: #fff; border-radius: 8px; }
+
 /* 홈 배경 CSS */
 .home__background{ position: relative; z-index: 10; width: 100%; }
 .home__particle{ position: absolute; left: 0; top: 0; width: 100%; z-index: 15; overflow: visible; }
@@ -19,7 +21,8 @@
 .home__header{ margin-top: 100px; margin-bottom: 46px; padding: 0px 30px; width: 100%; }
 .home__title{ font-size: 32px; font-weight: 400; color: #333; }
 .home__title strong{ color: #333; font-weight: 700; }
-.home__searchBar{ margin-top: 20px; padding: 12px 16px; width: 100%; font-size: 16px; font-weight: 400; background-color: rgba(255, 255, 255, 0.5); border-radius: 30px; }
+.home__searchBar{ margin-top: 20px; padding: 12px 16px; display: flex; justify-content: space-between; align-items: center; width: 100%; font-size: 16px; font-weight: 400; background-color: rgba(255, 255, 255, 0.5); border-radius: 30px; }
+.home__searchBar--button{ cursor: pointer; }
 
 .home__contents{ padding: 24px 0px; width: 100%; background-color: #fff; border-top-left-radius: 66px; }
 .home__popular{ padding: 0px 30px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }

@@ -7,7 +7,7 @@ function CreateGame(){
 
     const history = useHistory();
     
-    const goToHome = () => { history.push('./home'); };
+    const goToHome = () => { history.push('./CreateGroup'); };
 
     const writeDom = useRef();
     const gameTitle = useRef();
@@ -633,7 +633,7 @@ function CreateGame(){
                         </div>
                         
                         <div className="place__search--keyword-items">
-                            <p className="place__search--keyword-text">세종특별자치도</p>
+                            <p className="place__search--keyword-text">세종특별자치시</p>
                         </div>
                         
                         <div className="place__search--keyword-items">

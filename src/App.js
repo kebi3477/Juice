@@ -7,6 +7,8 @@ import FindID from './js/FindID';
 import FindPW from './js/FindPW';
 import Home from './js/Home';
 import CreateGame from './js/CreateGame';	
+import CreateGroup from './js/CreateGroup';	
+import WritePost from './js/WritePost';	
 
 function App() {
 	return (
@@ -18,6 +20,8 @@ function App() {
 				<Route exact path="/findid" component={FindID} />
 				<Route exact path="/findpw" component={FindPW} />
 				<Route exact path="/createGame" component={CreateGame} />
+				<Route exact path="/createGroup" component={CreateGroup} />
+				<Route exact path="/writePost" component={WritePost} />
 			</Router>
 		</div>
 	);

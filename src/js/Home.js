@@ -6,9 +6,12 @@ import sparkling from './sparkling.js';
 function Home(){
 
     const history = useHistory();
+    const goToCreateGroup = () => { history.push('./createGroup'); };
     
     return(
         <div className="home">
+
+            <button className="createGroup__Button" onClick={goToCreateGroup}>그룹 개설하기</button>
 
             <div className="menu">
                 <div className="menu__btn--home menu__btn active">
@@ -93,7 +96,24 @@ function Home(){
                 {/* // 홈 타이틀 */}
                 <div className="home__header">
                     <p className="home__title"><strong>주</strong>변의 있는 사람과 <br></br> 함께하는 <strong>스</strong>포츠</p>
-                    <input className="home__searchBar" type="text" name="keyword" autoComplete="off" />
+                    <div className="home__searchBar">
+                        <input type="text" name="keyword" autoComplete="off" />
+                        <svg className="home__searchBar--button" width="18.719" height="18.513" viewBox="0 0 18.719 18.513">
+                            <g id="그룹_262" data-name="그룹 262" transform="translate(-1.966 -2.004)">
+                                <g id="그룹_261" data-name="그룹 261" transform="translate(1.966 2.004)">
+                                <g id="그룹_258" data-name="그룹 258">
+                                    <path id="패스_178" data-name="패스 178" d="M11.846,20.419A8.392,8.392,0,0,1,6.18,5.836a.566.566,0,1,1,.764.834,7.23,7.23,0,1,0,3.624-1.792.566.566,0,0,1-.2-1.114,8.392,8.392,0,1,1,1.474,16.654Z" transform="translate(-3.454 -3.636)" fill="#f5a21a"/>
+                                </g>
+                                <g id="그룹_259" data-name="그룹 259" transform="translate(9.737 8.946)">
+                                    <path id="패스_179" data-name="패스 179" d="M21.233,24.687a.566.566,0,0,1-.195-1.1,5.035,5.035,0,0,0,3.18-3.688.566.566,0,1,1,1.108.227,6.175,6.175,0,0,1-3.9,4.522A.572.572,0,0,1,21.233,24.687Z" transform="translate(-20.667 -19.45)" fill="#f5a21a"/>
+                                </g>
+                                <g id="그룹_260" data-name="그룹 260" transform="translate(13.501 13.211)">
+                                    <path id="패스_180" data-name="패스 180" d="M31.974,32.293a.564.564,0,0,1-.4-.17l-4.087-4.171a.566.566,0,0,1,.808-.791l4.087,4.171a.565.565,0,0,1-.4.961Z" transform="translate(-27.322 -26.991)" fill="#f5a21a"/>
+                                </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </div>
                 </div>
 
                 <div className="home__contents">
