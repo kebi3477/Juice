@@ -3,6 +3,13 @@
 .home__back{ position: absolute; left: 0; top: 0; z-index: 10; width: 100%; overflow-x: hidden; }
 .home__front{ position: absolute; left: 0; top: 0; z-index: 20; width: 100%; height: 100%; overflow-x: hidden; display: flex; flex-direction: column; justify-content: flex-start; align-items: center; }
 
+/* 메뉴 CSS */
+.menu{ position: fixed; left: 50%; bottom: 0; z-index: 30; transform: translateX(-50%); padding: 10px 46px; width: 420px; display: flex; justify-content: space-between; align-items: flex-start; background-color: #fff; box-shadow: 0px -2px 4px #d1d1d1; }
+.menu__btn{ cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.menu__btn--icon{ height: 28px; }
+.menu__btn--name{ font-size: 10px; font-weight: 500; }
+.menu__btn.active .menu__btn--name{ color: var(--main-color2); }
+.menu__btn:hover *{ color: var(--main-color2); fill: var(--main-color2); transition: 300ms ease-in-out; }
 
 /* 홈 배경 CSS */
 .home__background{ position: relative; z-index: 10; width: 100%; }
@@ -14,14 +21,14 @@
 .home__title strong{ color: #333; font-weight: 700; }
 .home__searchBar{ margin-top: 20px; padding: 12px 16px; width: 100%; font-size: 16px; font-weight: 400; background-color: rgba(255, 255, 255, 0.5); border-radius: 30px; }
 
-.home__contents{ padding: 24px 0px; width: 100%; height: 100%; background-color: #fff; border-top-left-radius: 66px; }
+.home__contents{ padding: 24px 0px; width: 100%; background-color: #fff; border-top-left-radius: 66px; }
 .home__popular{ padding: 0px 30px; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-start; }
 .home__popular--header{ padding-left: 16px; width: 100%; display: flex; justify-content: space-between; align-items: flex-end; }
 .home__popular--header-title{ font-size: 22px; font-weight: 500; }
 .home__popular--header-more{ cursor: pointer; font-size: 16px; font-weight: 400; }
 .home__popular--header-more svg{ transition: 300ms ease-in-out; transform: translateX(0); margin-left: 10px; }
 .home__popular--header-more:hover svg{ transform: translateX(50%); }
-.home__popular--contents{ margin-top: 12px; padding-right: 16px; width: 100%; }
+.home__popular--contents{ margin-top: 12px; padding-right: 16px; width: 100%; background-color: #fff; }
 .home__popular--post{ cursor: pointer; width: 100%; height: 280px; display: grid; grid-template-rows: 2fr 1fr; border-radius: 18px; overflow: hidden; box-shadow: 0px 0px 10px rgba(244, 228, 210, 0.85); }
 .home__popular--post-frame{ position: relative; width: 100%; }
 .home__popular--post-img{ position: absolute; left: 0; top: 0; width: 100%; height: 100%; object-fit: cover; }
