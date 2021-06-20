@@ -1,9 +1,39 @@
-import React from 'react';
-import { useHistory } from "react-router-dom";
+import React, { useRef } from 'react';
+import { useHistory,  } from "react-router-dom";
 import './CreateGame.css';
 import sparkling from './sparkling.js';
 
 function CreateGame(){
+
+    const dateDom = useRef();
+    const dateTitle = useRef();
+    const dateOpen = () => { dateDom.current.style.display = 'flex'; };
+    const dateClose = () => { dateDom.current.style.display = 'none'; dateTitle.current.textContent = '2021-06-21'; };
+
+    const eventDom = useRef();
+    const eventTitle = useRef();
+    const eventOpen = () => { eventDom.current.style.display = 'flex'; };
+    const eventClose = () => { eventDom.current.style.display = 'none'; eventTitle.current.textContent = '배드민턴(badminton)'; };
+
+    const placeDom = useRef();
+    const placeTitle = useRef();
+    const placeOpen = () => { placeDom.current.style.display = 'flex'; };
+    const placeClose = () => { placeDom.current.style.display = 'none'; placeTitle.current.textContent = '서울특별시'; };
+
+    const memberDom = useRef();
+    const memberTitle = useRef();
+    const memberOpen = () => { memberDom.current.style.display = 'flex'; };
+    const memberClose = () => { memberDom.current.style.display = 'none'; memberTitle.current.textContent = '10명'; };
+
+    const costDom = useRef();
+    const costTitle = useRef();
+    const costOpen = () => { costDom.current.style.display = 'flex'; };
+    const costClose = () => { costDom.current.style.display = 'none'; costTitle.current.textContent = '3,000원'; };
+
+    const ageDom = useRef();
+    const ageTitle = useRef();
+    const ageOpen = () => { ageDom.current.style.display = 'flex'; };
+    const ageClose = () => { ageDom.current.style.display = 'none'; ageTitle.current.textContent = '30대'; };
     
     return(
         <div className="createGame">
@@ -73,20 +103,20 @@ function CreateGame(){
                     </div>
 
                     <div className="createGame__contents--center">
-                        <div className="createGame__contents--event">
+                        <div className="createGame__contents--event" onClick={eventOpen}>
                             <p className="createGame__contents--event-title createGame__contents--title">경기종목</p>
                             <div className="createGame__contents--event-input createGame__contents--select">
-                                <p className="createGame__contents--select-title">종목 선택</p>
+                                <p className="createGame__contents--select-title" ref={eventTitle}>종목 선택</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="7.302" height="12.778" viewBox="0 0 7.302 12.778">
                                     <path id="패스_3" data-name="패스 3" d="M-1297.537,483l-5.476,5.476-5.476-5.476-.913.913,5.476,5.476.913.913.913-.913,5.476-5.476Z" transform="translate(-483 -1296.624) rotate(-90)" fill="#666"/>
                                 </svg>
                             </div>
                         </div>
                         
-                        <div className="createGame__contents--date">
+                        <div className="createGame__contents--date" onClick={dateOpen}>
                             <p className="createGame__contents--date-title createGame__contents--title">경기날짜</p>
                             <div className="createGame__contents--date-input createGame__contents--select">
-                                <p className="createGame__contents--select-title">__월__일</p>
+                                <p className="createGame__contents--select-title" ref={dateTitle}>__월__일</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="7.302" height="12.778" viewBox="0 0 7.302 12.778">
                                     <path id="패스_3" data-name="패스 3" d="M-1297.537,483l-5.476,5.476-5.476-5.476-.913.913,5.476,5.476.913.913.913-.913,5.476-5.476Z" transform="translate(-483 -1296.624) rotate(-90)" fill="#666"/>
                                 </svg>
@@ -95,48 +125,43 @@ function CreateGame(){
                         
                         <div className="createGame__contents--time">
                             <p className="createGame__contents--time-title createGame__contents--title">경기시간</p>
-                            <div className="createGame__contents--time-input createGame__contents--select">
-                                <p className="createGame__contents--select-title">__:__</p>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="7.302" height="12.778" viewBox="0 0 7.302 12.778">
-                                    <path id="패스_3" data-name="패스 3" d="M-1297.537,483l-5.476,5.476-5.476-5.476-.913.913,5.476,5.476.913.913.913-.913,5.476-5.476Z" transform="translate(-483 -1296.624) rotate(-90)" fill="#666"/>
-                                </svg>
-                            </div>
+                            <input className="createGame__contents--time-input createGame__contents--select" type="time" />
                         </div>
                         
-                        <div className="createGame__contents--place">
+                        <div className="createGame__contents--place" onClick={placeOpen}>
                             <p className="createGame__contents--place-title createGame__contents--title">경기장소</p>
                             <div className="createGame__contents--place-input createGame__contents--select">
-                                <p className="createGame__contents--select-title">장소선택</p>
+                                <p className="createGame__contents--select-title" ref={placeTitle}>장소선택</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="7.302" height="12.778" viewBox="0 0 7.302 12.778">
                                     <path id="패스_3" data-name="패스 3" d="M-1297.537,483l-5.476,5.476-5.476-5.476-.913.913,5.476,5.476.913.913.913-.913,5.476-5.476Z" transform="translate(-483 -1296.624) rotate(-90)" fill="#666"/>
                                 </svg>
                             </div>
                         </div>
                         
-                        <div className="createGame__contents--member">
+                        <div className="createGame__contents--member" onClick={memberOpen}>
                             <p className="createGame__contents--member-title createGame__contents--title">참여인원</p>
                             <div className="createGame__contents--member-input createGame__contents--select">
-                                <p className="createGame__contents--select-title">_명</p>
+                                <p className="createGame__contents--select-title" ref={memberTitle}>_명</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="7.302" height="12.778" viewBox="0 0 7.302 12.778">
                                     <path id="패스_3" data-name="패스 3" d="M-1297.537,483l-5.476,5.476-5.476-5.476-.913.913,5.476,5.476.913.913.913-.913,5.476-5.476Z" transform="translate(-483 -1296.624) rotate(-90)" fill="#666"/>
                                 </svg>
                             </div>
                         </div>
                         
-                        <div className="createGame__contents--cost">
+                        <div className="createGame__contents--cost" onClick={costOpen}>
                             <p className="createGame__contents--cost-title createGame__contents--title">참여비용</p>
                             <div className="createGame__contents--cost-input createGame__contents--select">
-                                <p className="createGame__contents--select-title">__원</p>
+                                <p className="createGame__contents--select-title" ref={costTitle}>__원</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="7.302" height="12.778" viewBox="0 0 7.302 12.778">
                                     <path id="패스_3" data-name="패스 3" d="M-1297.537,483l-5.476,5.476-5.476-5.476-.913.913,5.476,5.476.913.913.913-.913,5.476-5.476Z" transform="translate(-483 -1296.624) rotate(-90)" fill="#666"/>
                                 </svg>
                             </div>
                         </div>
                         
-                        <div className="createGame__contents--age">
+                        <div className="createGame__contents--age" onClick={ageOpen}>
                             <p className="createGame__contents--age-title createGame__contents--title">나이</p>
                             <div className="createGame__contents--age-input createGame__contents--select">
-                                <p className="createGame__contents--select-title">__대</p>
+                                <p className="createGame__contents--select-title" ref={ageTitle}>__대</p>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="7.302" height="12.778" viewBox="0 0 7.302 12.778">
                                     <path id="패스_3" data-name="패스 3" d="M-1297.537,483l-5.476,5.476-5.476-5.476-.913.913,5.476,5.476.913.913.913-.913,5.476-5.476Z" transform="translate(-483 -1296.624) rotate(-90)" fill="#666"/>
                                 </svg>
@@ -170,11 +195,13 @@ function CreateGame(){
                             <p className="createGame__contents--issues-title createGame__contents--title">주의사항</p>
                             <input className="createGame__contents--issues-input" type="text" placeholder="경기에 필요한 주의사항을 입력하세요." />
                         </div>
+
+                        <button className="createGame__contents--button">생성하기</button>
                     </div>
                 </div>
             </div>
 
-            <div className="createGame__modal--date createGame__modal">
+            <div className="createGame__modal--date createGame__modal" ref={dateDom}>
                 <div className="createGame__modal--contents">
                     <div className="createGame__modal--header">
                         <p className="createGame__modal--header-title">경기날짜</p>
@@ -183,43 +210,43 @@ function CreateGame(){
                     <div className="createGame__modal--date-contents createGame__modal--center">
                         <div className="createGame__modal--date-days">
                             <b className="createGame__modal--date-year"></b>
-                            <b className="createGame__modal--date-month">8</b>
-                            <b className="createGame__modal--date-day">9</b>
+                            <b className="createGame__modal--date-month">4</b>
+                            <b className="createGame__modal--date-day">19</b>
                         </div>
                         
                         <div className="createGame__modal--date-days">
                             <b className="createGame__modal--date-year"></b>
-                            <b className="createGame__modal--date-month">9</b>
-                            <b className="createGame__modal--date-day">10</b>
+                            <b className="createGame__modal--date-month">5</b>
+                            <b className="createGame__modal--date-day">20</b>
                         </div>
 
                         <div className="createGame__modal--date-days">
                             <b className="createGame__modal--date-year active">2021년</b>
-                            <b className="createGame__modal--date-month active">10월</b>
-                            <b className="createGame__modal--date-day active">11일</b>
+                            <b className="createGame__modal--date-month active">6월</b>
+                            <b className="createGame__modal--date-day active">21일</b>
                         </div>
 
                         <div className="createGame__modal--date-days">
                             <b className="createGame__modal--date-year">2022</b>
-                            <b className="createGame__modal--date-month">11</b>
-                            <b className="createGame__modal--date-day">12</b>
+                            <b className="createGame__modal--date-month">7</b>
+                            <b className="createGame__modal--date-day">22</b>
                         </div>
 
                         <div className="createGame__modal--date-days">
                             <b className="createGame__modal--date-year"></b>
-                            <b className="createGame__modal--date-month">12</b>
-                            <b className="createGame__modal--date-day">13</b>
+                            <b className="createGame__modal--date-month">8</b>
+                            <b className="createGame__modal--date-day">23</b>
                         </div>
                     </div>
 
                     <div className="createGame__modal--footer">
                         <button className="createGame__modal--footer-button">취소</button>
-                        <button className="createGame__modal--footer-button">확인</button>
+                        <button className="createGame__modal--footer-button" onClick={dateClose}>확인</button>
                     </div>
                 </div>
             </div>
 
-            <div className="createGame__modal--age createGame__modal">
+            <div className="createGame__modal--age createGame__modal" ref={ageDom}>
                 <div className="createGame__modal--contents">
                     <div className="createGame__modal--header">
                         <p className="createGame__modal--header-title">나이</p>
@@ -238,12 +265,12 @@ function CreateGame(){
 
                     <div className="createGame__modal--footer">
                         <button className="createGame__modal--footer-button">직접설정</button>
-                        <button className="createGame__modal--footer-button">확인</button>
+                        <button className="createGame__modal--footer-button" onClick={ageClose}>확인</button>
                     </div>
                 </div>
             </div>
 
-            <div className="createGame__modal--member createGame__modal">
+            <div className="createGame__modal--member createGame__modal" ref={memberDom}>
                 <div className="createGame__modal--contents">
                     <div className="createGame__modal--header">
                         <p className="createGame__modal--header-title">참여인원</p>
@@ -259,12 +286,12 @@ function CreateGame(){
 
                     <div className="createGame__modal--footer">
                         <button className="createGame__modal--footer-button">직접설정</button>
-                        <button className="createGame__modal--footer-button">확인</button>
+                        <button className="createGame__modal--footer-button" onClick={memberClose}>확인</button>
                     </div>
                 </div>
             </div>
 
-            <div className="createGame__modal--cost createGame__modal">
+            <div className="createGame__modal--cost createGame__modal" ref={costDom}>
                 <div className="createGame__modal--contents">
                     <div className="createGame__modal--header">
                         <p className="createGame__modal--header-title">참여비용</p>
@@ -283,14 +310,14 @@ function CreateGame(){
 
                     <div className="createGame__modal--footer">
                         <button className="createGame__modal--footer-button">직접설정</button>
-                        <button className="createGame__modal--footer-button">확인</button>
+                        <button className="createGame__modal--footer-button" onClick={costClose}>확인</button>
                     </div>
                 </div>
             </div>
 
-            <div className="home__search">
-                <div className="home__search--header">
-                    <svg className="home__search--header-svg" width="19.315" height="13.44" viewBox="0 0 19.315 13.44">
+            <div className="event__search" ref={eventDom}>
+                <div className="event__search--header">
+                    <svg className="event__search--header-svg" width="19.315" height="13.44" viewBox="0 0 19.315 13.44">
                         <g transform="translate(19.315 13.44) rotate(180)">
                             <path d="M-1152.519,479.8l1.3-1.3-1.3-1.3-5.421-5.421-1.3,1.3,5.422,5.421-5.422,5.421,1.3,1.3Z" transform="translate(1170.535 -471.778)"/>
                             <g transform="translate(0 5.802)">
@@ -298,96 +325,181 @@ function CreateGame(){
                             </g>
                         </g>
                     </svg>
-                    <p className="home__search--header-title">경기종목</p>
+                    <p className="event__search--header-title">경기종목</p>
                 </div>
 
-                <div className="home__search--contents">
-                    <div className="home__search--bar">
-                        <input className="home__search--bar-input" type="text" placeholder="종목 이름을 검색하세요." />
-                        <svg className="home__search--bar-button" width="13.393" height="14.021" viewBox="0 0 13.393 14.021">
+                <div className="event__search--contents">
+                    <div className="event__search--bar">
+                        <input className="event__search--bar-input" type="text" placeholder="종목 이름을 검색하세요." />
+                        <svg className="event__search--bar-button" width="13.393" height="14.021" viewBox="0 0 13.393 14.021">
                             <path id="패스_4" data-name="패스 4" d="M-959.135,539.513l-3.776-3.776a5.6,5.6,0,0,0,1.617-3.937,5.623,5.623,0,0,0-5.617-5.617,5.623,5.623,0,0,0-5.617,5.617,5.623,5.623,0,0,0,5.617,5.617,5.583,5.583,0,0,0,3.252-1.046l3.833,3.833Zm-12.416-7.713a4.645,4.645,0,0,1,4.64-4.64,4.645,4.645,0,0,1,4.64,4.64,4.645,4.645,0,0,1-4.64,4.64A4.645,4.645,0,0,1-971.551,531.8Z" transform="translate(972.528 -526.183)" fill="#ddd"/>
                         </svg>
                     </div>
 
-                    <div className="home__search--keyword">
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>축구</strong>(soccer)</p>
+                    <div className="event__search--keyword">
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>축구</strong>(soccer)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>야구</strong>(baseball)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>야구</strong>(baseball)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>농구</strong>(basketball)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>농구</strong>(basketball)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>배구</strong>(volleyball)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>배구</strong>(volleyball)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>탁구</strong>(table tennis)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>탁구</strong>(table tennis)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>필드하키</strong>(field hockey)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>필드하키</strong>(field hockey)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>럭비</strong>(football)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>럭비</strong>(football)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>족구</strong>(foot volleyball)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>족구</strong>(foot volleyball)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items focus">
-                            <p className="home__search--keyword-text"><strong>배드민턴</strong>(badminton)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text" onClick={eventClose}><strong>배드민턴</strong>(badminton)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>수영</strong>(swimming)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>수영</strong>(swimming)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>자전거</strong>(bicycle)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>자전거</strong>(bicycle)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>승마</strong>(riding)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>승마</strong>(riding)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>테니스</strong>(tennis)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>테니스</strong>(tennis)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>유도</strong>(judo)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>유도</strong>(judo)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>골프</strong>(golf)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>골프</strong>(golf)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>레슬링</strong>(wrestling)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>레슬링</strong>(wrestling)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>검도</strong>(kendo)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>검도</strong>(kendo)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>복싱</strong>(boxing)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>복싱</strong>(boxing)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>킥복싱</strong>(kickboxing)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>킥복싱</strong>(kickboxing)</p>
                         </div>
                         
-                        <div className="home__search--keyword-items">
-                            <p className="home__search--keyword-text"><strong>태권도</strong>(taekwondo)</p>
+                        <div className="event__search--keyword-items">
+                            <p className="event__search--keyword-text"><strong>태권도</strong>(taekwondo)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div className="place__search" ref={placeDom}>
+                <div className="place__search--header">
+                    <svg className="place__search--header-svg" width="19.315" height="13.44" viewBox="0 0 19.315 13.44">
+                        <g transform="translate(19.315 13.44) rotate(180)">
+                            <path d="M-1152.519,479.8l1.3-1.3-1.3-1.3-5.421-5.421-1.3,1.3,5.422,5.421-5.422,5.421,1.3,1.3Z" transform="translate(1170.535 -471.778)"/>
+                            <g transform="translate(0 5.802)">
+                                <rect width="17.171" height="1.836" fill="#231f20"/>
+                            </g>
+                        </g>
+                    </svg>
+                    <p className="place__search--header-title">경기종목</p>
+                </div>
+
+                <div className="place__search--contents">
+                    <div className="place__search--bar">
+                        <input className="place__search--bar-input" type="text" placeholder="지역을 검색하세요." />
+                        <svg className="place__search--bar-button" width="13.393" height="14.021" viewBox="0 0 13.393 14.021">
+                            <path id="패스_4" data-name="패스 4" d="M-959.135,539.513l-3.776-3.776a5.6,5.6,0,0,0,1.617-3.937,5.623,5.623,0,0,0-5.617-5.617,5.623,5.623,0,0,0-5.617,5.617,5.623,5.623,0,0,0,5.617,5.617,5.583,5.583,0,0,0,3.252-1.046l3.833,3.833Zm-12.416-7.713a4.645,4.645,0,0,1,4.64-4.64,4.645,4.645,0,0,1,4.64,4.64,4.645,4.645,0,0,1-4.64,4.64A4.645,4.645,0,0,1-971.551,531.8Z" transform="translate(972.528 -526.183)" fill="#ddd"/>
+                        </svg>
+                    </div>
+
+                    <div className="place__search--keyword">
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text" onClick={placeClose}>서울특별시</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">강원도</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">경기도</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">경상남도</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">경상북도</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">전라남도</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">전라북도</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">광주광역시</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">대구광역시</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">대전광역시</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">부산광역시</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">울산광역시</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">인천광역시</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">세종특별자치도</p>
+                        </div>
+                        
+                        <div className="place__search--keyword-items">
+                            <p className="place__search--keyword-text">제주특별자치도</p>
                         </div>
                     </div>
                 </div>
