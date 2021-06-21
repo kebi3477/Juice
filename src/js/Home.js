@@ -7,31 +7,34 @@ function Home(){
 
     const history = useHistory();
     const goToCreateGroup = () => { history.push('./createGroup'); };
+    const goToMyPage = () => { history.push('./myPage'); };
+    const goToCreteGame = () => { history.push('./createGame'); };
     
     return(
         <div className="home">
 
-            <button className="createGroup__Button" onClick={goToCreateGroup}>그룹 개설하기</button>
+            <button className="createGame__Button" onClick={goToCreateGroup}>그룹 개설하기</button>
+            <button className="createGroup__Button" onClick={goToCreteGame}>경기 생성</button>
 
-            <div className="menu">
-                <div className="menu__btn--home menu__btn active">
-                    <svg className="menu__btn--icon" width="27.46" height="27.19" viewBox="0 0 27.46 27.19">
+            <div className="menu__home">
+                <div className="menu__home__btn--home menu__btn active">
+                    <svg className="menu__home__btn--icon" width="27.46" height="27.19" viewBox="0 0 27.46 27.19">
                         <path id="패스_149" data-name="패스 149" d="M281.032,30.65h-5.79a2.469,2.469,0,0,1-2.465-2.466V22.727a.8.8,0,0,0-.8-.8h-4.89a.8.8,0,0,0-.8.8v5.457a2.468,2.468,0,0,1-2.465,2.466H258.5a2.469,2.469,0,0,1-2.466-2.466v-13.9a3.191,3.191,0,0,1,1.3-2.567l4.081-2.985a.822.822,0,0,1,.971,1.327l-4.081,2.985a1.539,1.539,0,0,0-.63,1.24v13.9a.822.822,0,0,0,.822.822h5.318a.822.822,0,0,0,.821-.822V22.727a2.447,2.447,0,0,1,2.444-2.445h4.89a2.447,2.447,0,0,1,2.445,2.445v5.457a.822.822,0,0,0,.821.822h5.79a.822.822,0,0,0,.821-.822V14.305a1.54,1.54,0,0,0-.646-1.252l-10.816-7.7a1.349,1.349,0,0,0-1.582.01l-1.94,1.42a.822.822,0,1,1-.971-1.327l1.94-1.42a2.992,2.992,0,0,1,3.506-.023l10.816,7.7a3.188,3.188,0,0,1,1.337,2.592V28.184A2.468,2.468,0,0,1,281.032,30.65Z" transform="translate(-256.037 -3.46)" fill="#f5a21a"/>
                     </svg>
-                    <b className="menu__btn--name">홈</b>
+                    <b className="menu__home__btn--name">홈</b>
                 </div>
                 
-                <div className="menu__btn--group menu__btn">
-                    <svg className="menu__btn--icon" width="26.502" height="26.34" viewBox="0 0 26.502 26.34">
+                <div className="menu__home__btn--group menu__home__btn">
+                    <svg className="menu__home__btn--icon" width="26.502" height="26.34" viewBox="0 0 26.502 26.34">
                         <path id="패스_168" data-name="패스 168" d="M208.231,21.945H213.6a.8.8,0,1,0,0-1.592h-5.369a.8.8,0,1,0,0,1.592Z" transform="translate(-204.149 -6.895)" fill="#e0e0e0"/>
                         <path id="패스_169" data-name="패스 169" d="M226.4,3.556H212.872a.8.8,0,0,0,0,1.6H226.4a1.812,1.812,0,0,1,1.809,1.809V9.053h-23.3V6.967a1.811,1.811,0,0,1,1.809-1.809h.489a.8.8,0,0,0,0-1.6h-.489a3.415,3.415,0,0,0-3.411,3.411V24.35a5.552,5.552,0,0,0,5.546,5.546h15.41a5.552,5.552,0,0,0,5.546-5.546V6.967A3.415,3.415,0,0,0,226.4,3.556Zm1.809,20.794a3.948,3.948,0,0,1-3.944,3.944h-15.41a3.948,3.948,0,0,1-3.944-3.944v-13.7h23.3Z" transform="translate(-203.306 -3.556)" fill="#e0e0e0"/>
                         <path id="패스_170" data-name="패스 170" d="M208.231,17.815h9.462a.8.8,0,1,0,0-1.592h-9.462a.8.8,0,1,0,0,1.592Z" transform="translate(-204.149 -6.074)" fill="#e0e0e0"/>
                     </svg>
-                    <b className="menu__btn--name">속한그룹</b>
+                    <b className="menu__home__btn--name">속한그룹</b>
                 </div>
 
-                <div className="menu__btn--more menu__btn">
-                    <svg className="menu__btn--icon" width="26.062" height="7.415" viewBox="0 0 26.062 7.415">
+                <div className="menu__home__btn--more menu__home__btn">
+                    <svg className="menu__home__btn--icon" width="26.062" height="7.415" viewBox="0 0 26.062 7.415">
                         <g id="그룹_185" data-name="그룹 185" transform="translate(0 0.713)">
                             <path id="패스_161" data-name="패스 161" d="M7.413,22.964a3.708,3.708,0,0,1-2.433-6.5.8.8,0,0,1,1.052,1.209,2.106,2.106,0,1,0,2.765,0,.8.8,0,0,1,1.054-1.207,3.707,3.707,0,0,1-2.439,6.5Z" transform="translate(-3.706 -16.262)" fill="#e0e0e0"/>
                         </g>
@@ -42,7 +45,7 @@ function Home(){
                             <path id="패스_163" data-name="패스 163" d="M30.746,22.787a3.708,3.708,0,1,1,3.708-3.708A3.711,3.711,0,0,1,30.746,22.787Zm0-5.813a2.105,2.105,0,1,0,2.105,2.105A2.108,2.108,0,0,0,30.746,16.974Z" transform="translate(-27.039 -15.372)" fill="#e0e0e0"/>
                         </g>
                     </svg>
-                    <b className="menu__btn--name">더보기</b>
+                    <b className="menu__home__btn--name" onClick={goToMyPage}>더보기</b>
                 </div>
             </div>
 

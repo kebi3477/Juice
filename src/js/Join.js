@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from "react-router-dom";
 import './Join.css';
 import sparkling from './sparkling.js';
 
@@ -10,6 +11,9 @@ function Join(){
         formIsBlock.display === 'flex' ? setFormIsBlock({display: 'none'}) : setFormIsBlock({display: 'flex'});
         profileIsBlock.display === 'flex' ? setProfileIsBlock({display: 'none'}) : setProfileIsBlock({display: 'flex'});
     };
+
+    const history = useHistory();
+    const goToLogin = () => { history.push('./login'); };
     
     return(
         <div className="join">
@@ -93,7 +97,7 @@ function Join(){
 
                         <input className="join__profile--file" type="file" />
                         <button className="join__form--input join__profile--file-btn" type="button">프로필 사진 추가</button>
-                        <button className="join__form--input join__profile--pass" type="button">건너뛰기</button>
+                        <button className="join__form--input join__profile--pass" type="button" onClick={goToLogin}>건너뛰기</button>
                     </div>
                 </div>
             </div>

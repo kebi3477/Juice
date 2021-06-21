@@ -26,7 +26,7 @@
 .createGroup__sport--title{ font-size: 14px; font-weight: 500; color: #8d8d8d; }
 .createGroup__sport--input{ width: 126px; font-size: 16px; font-weight: 400; }
 
-.createGroup__bottom{ position: absolute; left: 0; bottom: 0; overflow: hidden; width: 100%; display: grid; grid-template-columns: 1fr 2fr; box-shadow: 0px -2px 8px #8d8d8d; border-top-left-radius: 10px; border-top-right-radius: 10px; }
+.createGroup__bottom{ position: absolute; left: 0; bottom: 0; z-index: 20; overflow: hidden; width: 100%; transform: translateY(-100%); display: grid; grid-template-columns: 1fr 2fr; box-shadow: 0px -2px 6px #8d8d8d; border-top-left-radius: 10px; border-top-right-radius: 10px; }
 .createGroup__bottom > *{ padding: 18px 0px; }
 .createGroup__bottom--cancel{ font-size: 18px; font-weight: 400; color: var(--main-gray); }
 .createGroup__bottom--done{ font-size: 18px; font-weight: 400; color: #fff; background-color: var(--main-color2); }
@@ -65,4 +65,12 @@
 .createGroup__view--post-date{ color: var(--main-gray); font-size: 12px; font-weight: 400; }
 
 .createGroup__join{ display: none; position: fixed; left: 50%; bottom: 0; z-index: 40; transform: translate(-50%, -100%); padding: 18px 46px; width: 420px; color: #fff; font-size: 18px; font-weight: 400; background-color: var(--main-color2); border-top-left-radius: 10px; border-top-right-radius: 10px; }
-.menu{ display: none; }
+.menuCreateGroup{ display: none; }
+
+.menuCreateGroup{ position: fixed; left: 50%; bottom: 0; z-index: 30; transform: translateX(-50%); padding: 10px 46px; width: 420px; display: flex; justify-content: space-between; align-items: flex-start; background-color: #fff; box-shadow: 0px -2px 4px #d1d1d1; }
+.menuCreateGroup__btn{ cursor: pointer; display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.menuCreateGroup__btn--icon{ height: 28px; }
+.menuCreateGroup__btn--name{ font-size: 10px; font-weight: 500; }
+.menuCreateGroup__btn--home{ display: flex; flex-direction: column; justify-content: center; align-items: center; }
+.menuCreateGroup__btn.active .menuCreateGroup__btn--name{ color: var(--main-color2); }
+.menuCreateGroup__btn:hover *{ color: var(--main-color2); fill: var(--main-color2); transition: 300ms ease-in-out; }

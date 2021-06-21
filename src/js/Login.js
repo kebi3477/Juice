@@ -6,10 +6,7 @@ import sparkling from './sparkling.js';
 function Login(){
 
     const history = useHistory();
-
-    const loging = () => {
-        console.log('loging click');
-    }
+    const goToHome = () => { history.push('./home'); };
     
     const join = () => {
         history.push('./join');
@@ -83,7 +80,7 @@ function Login(){
                 <form className="login__form" method="POST">
                     <input className="login__form--input login__form--input-id" type="text" placeholder="아이디" />
                     <input className="login__form--input login__form--input-pw" type="password" placeholder="비밀번호" />
-                    <button className="login__form--input login__form--input-login" type="button" onClick={loging}>로그인</button>
+                    <button className="login__form--input login__form--input-login" type="button" onClick={goToHome}>로그인</button>
                 </form>
 
                 {/* // 로그인 메뉴 */}

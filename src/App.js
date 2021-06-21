@@ -9,6 +9,7 @@ import Home from './js/Home';
 import CreateGame from './js/CreateGame';	
 import CreateGroup from './js/CreateGroup';	
 import WritePost from './js/WritePost';	
+import MyPage from './js/MyPage';	
 
 function App() {
 	return (
@@ -22,6 +23,7 @@ function App() {
 				<Route exact path="/createGame" component={CreateGame} />
 				<Route exact path="/createGroup" component={CreateGroup} />
 				<Route exact path="/writePost" component={WritePost} />
+				<Route exact path="/myPage" component={MyPage} />
 			</Router>
 		</div>
 	);
