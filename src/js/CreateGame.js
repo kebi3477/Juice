@@ -6,8 +6,7 @@ import sparkling from './sparkling.js';
 function CreateGame(){
 
     const history = useHistory();
-    
-    const goToHome = () => { history.push('./CreateGroup'); };
+    const goToHome = () => { history.push('./createGroup'); };
 
     const writeDom = useRef();
     const gameTitle = useRef();

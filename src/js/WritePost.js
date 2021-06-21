@@ -5,6 +5,9 @@ import sparkling from './sparkling.js';
 
 function WritePost(){
 
+    const history = useHistory();
+    const goToHome = () => { history.push('./home'); };
+
     const commentDom = useRef();
     const menuDom = useRef();
     const groupFile = useRef();
@@ -91,7 +94,7 @@ function WritePost(){
                 </div>
             </div>
 
-            <div className="writePost__view" ref={viewDom}>
+            <div className="writePost__view" ref={viewDom} onClick={goToHome}>
                 <div className="writePost__view--header">
                     <svg className="writePost__view--header-icon" width="19.315" height="13.44" viewBox="0 0 19.315 13.44">
                         <g id="그룹_88" data-name="그룹 88" transform="translate(-1159.164 481.827) rotate(180)">
@@ -135,7 +138,7 @@ function WritePost(){
 
             <div className="writePost__write" ref={writeDom}>
                 <div className="writePost__header">
-                    <svg className="writePost__header--icon" width="19.315" height="13.44" viewBox="0 0 19.315 13.44">
+                    <svg className="writePost__header--icon" width="19.315" height="13.44" viewBox="0 0 19.315 13.44" onClick={goToHome}>
                         <g id="그룹_88" data-name="그룹 88" transform="translate(-1159.164 481.827) rotate(180)">
                             <g id="그룹_6" data-name="그룹 6" transform="translate(-1178.478 468.387)">
                             <path id="패스_2" data-name="패스 2" d="M-1152.519,479.8l1.3-1.3-1.3-1.3-5.421-5.421-1.3,1.3,5.422,5.421-5.422,5.421,1.3,1.3Z" transform="translate(1170.535 -471.778)"/>
@@ -178,11 +181,11 @@ function WritePost(){
                         <p className="writePost__about--title">해시태그</p>
                         <textarea className="writePost__about--input" placeholder="#해시태그를 작성해주세요." ref={writeHash}></textarea>
                     </div>
+                </div>
 
-                    <div className="writePost__bottom">
-                        <button className="writePost__bottom--cancel">취소</button>
-                        <button className="writePost__bottom--done" onClick={writePostDone}>작성완료</button>
-                    </div>
+                <div className="writePost__bottom">
+                    <button className="writePost__bottom--cancel">취소</button>
+                    <button className="writePost__bottom--done" onClick={writePostDone}>작성완료</button>
                 </div>
             </div>
         </div>
